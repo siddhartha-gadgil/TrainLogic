@@ -35,7 +35,7 @@ layout: default
 
 
       <div class="section" id ="Assignments">
-        <h3> <a href="assign-all.html">Assignments</a> </h3>
+        <h3> <a href="assign-all.html">Exercises</a> </h3>
         <p>At least 50% of the grade will be based on assignments and projects, which will be in <code>Idris</code>. Please e-mail your assignments to <a href="mailto:siddhartha.gadgil@gmail.com" target="_blank"> siddhartha.gadgil@gmail.com</a> with "LTS2019" in the subject. The submissions will be added to the repository the day after the due date, and no late submissions will be accepted.
         </p>
         {% assign sorted = site.assignments | sort: 'date' | reverse %}
@@ -49,9 +49,17 @@ layout: default
           {% endfor %}
         </ul>
 
-        <h3>Projects</h3>
+        <h3>Lecture Slides</h3>
 
-        Projects are to be submitted as <em>pull requests</em> on the <a href="https://github.com/siddhartha-gadgil/LTS2019" target="_blank">repository</a>. You will be graded based on total contribution to all the class projects, which can be based on my suggestions or your own ideas. My suggestions will be at the <a href="https://github.com/siddhartha-gadgil/LTS2019/issues" target="_blank">issue tracker</a> of the repository and will be labelled as projects. You are welcome to comment on these and seek clarifications. You may also start a new issue with a project idea.
+        {% assign sorted = site.slides | sort: 'date' | reverse %}
+        <ul>
+  
+          {% for ass in sorted  %}
+          <li>
+            <a href="{{ site.baseurl }}{{ ass.url }}.html" target="_blank"> {{ ass.title }}</a> ({{ ass.date | date: "%a, %d %b %Y" }}).
+          </li>
+          {% endfor %}
+        </ul>
 
       </div>
 
@@ -90,9 +98,22 @@ layout: default
 
 
     </div>
+    <div class="col-md-3 section" id ="slides">
+      <h4> Lecture Slides </h4>
+      {% assign sorted = site.slides | sort: 'date' | reverse %}
+      <ul>
 
-    <div class="col-md-3 section" id ="Alerts">
-      <h4> <a href="assign-all.html">Upcoming Assignments</a> </h4>
+        {% for ass in sorted  %}
+        <li>
+          <a href="{{ site.baseurl }}{{ ass.url }}.html" target="_blank"> {{ ass.title }}</a> ({{ ass.date | date: "%a, %d %b %Y" }}).
+        </li>
+        {% endfor %}
+      </ul>
+      
+    </div>
+
+    <div class="col-md-3 section" id ="exercises">
+      <h4> <a href="assign-all.html">Exercises</a> </h4>
       {% assign sorted = site.assignments | sort: 'date' | reverse %}
       <ul>
 
@@ -102,14 +123,5 @@ layout: default
         </li>
         {% endfor %}
       </ul>
-      <h4>  <a href="announce-all.html">Announcements</a> </h4>
-      {% assign sorted = site.announcements | sort: 'date' | reverse %}
-      <ul>
-      {% for ass in sorted  %}
-      <li>
-        <a href="{{ site.baseurl }}{{ ass.url }}.html"> {{ ass.title }}</a>
-        <div> {{ ass.content | truncatewords: 30 }}</div>
-      </li>
-      {% endfor %}
-    </ul>
+      
     </div>

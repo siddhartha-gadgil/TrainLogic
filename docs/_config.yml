@@ -41,18 +41,12 @@ collections:
   assignments:
       output: true
       permalink: /assignments/:title
-  draft-assignments:
+  slides:
       output: true
-      permalink: /draft-assignments/:title
-  announcements:
-      output: true
-      permalink: /announcements/:title
+      permalink: /reveal.js/:title
   notes:
     output: true
     permalink: /notes/:title
-  reports:
-    output: true
-    permalink: /reports/:title
 
 exclude: ["private/", "Code/", "Assignments/"]
 
@@ -64,14 +58,9 @@ defaults:
       # title: "Department of Mathematics, IISc"
   - scope:
       path: ""
-      type: assignments
+      type: slides
     values:
-      layout: assignment
-  - scope:
-      path: ""
-      type: draft-assignments
-    values:
-      layout: draft-assignment
+      layout: slides
   - scope:
       path: ""
       type: notes
