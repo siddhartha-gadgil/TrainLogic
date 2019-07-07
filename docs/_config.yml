@@ -1,0 +1,79 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Logic and Types
+email: siddhartha.gadgil@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Website for the training course on Logic and Type Theory, 2019
+baseurl: "/TrainLogic" # the subpath of your site, e.g. /blog
+url: "https://siddhartha-gadgil.github.io" # the base hostname & protocol for your site
+twitter_username: SidGadgil
+github_username:  siddhartha-gadgil
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  # syntax_highlighter_opts:
+  #   # Use existing pygments syntax highlighting css
+  #   css_class: 'highlight'
+
+future: true
+
+collections:
+  assignments:
+      output: true
+      permalink: /assignments/:title
+  draft-assignments:
+      output: true
+      permalink: /draft-assignments/:title
+  announcements:
+      output: true
+      permalink: /announcements/:title
+  notes:
+    output: true
+    permalink: /notes/:title
+  reports:
+    output: true
+    permalink: /reports/:title
+
+exclude: ["private/", "Code/", "Assignments/"]
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      # title: "Department of Mathematics, IISc"
+  - scope:
+      path: ""
+      type: assignments
+    values:
+      layout: assignment
+  - scope:
+      path: ""
+      type: draft-assignments
+    values:
+      layout: draft-assignment
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: notes

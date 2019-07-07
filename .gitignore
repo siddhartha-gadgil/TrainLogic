@@ -1,0 +1,10 @@
+_site/
+_production-site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+*.ibc
+*.zip
+*.rar
+*.gz
+*.ZIP
