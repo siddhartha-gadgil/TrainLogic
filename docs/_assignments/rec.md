@@ -12,11 +12,11 @@ The motivation for this is that `rec` and `induc` are cleanly defined, and any c
 
 ## Submission
 
-Below is skeleton code for the assignment, also available on the [repository](https://github.com/siddhartha-gadgil/LTS2019/blob/master/Code/AssRecRule.idr). To submit the assignment,
+Below is skeleton code for the assignment, also available on the [repository](https://github.com/siddhartha-gadgil/TrainLogic/blob/master/Code/AssRecRule.idr). To submit the assignment,
 
 * create a file with this code with filename _[YourName]AssRecRule.idr_, e.g. _MickeyMouseAssRecRule.idr_
 * fill in all the definitions, with pattern matching used to define `recList` and `inducFin`, but pattern matching for `List` and `Fin` not used after that (you can use pattern matching for vectors while defining `fetchElem`).
-* e-mail the solution as a single file (with no dependencies) with subject _LTS2019 Assignment 2_ by the due date.
+* e-mail the solution as a single file (with no dependencies) with subject _TrainLogic Assignment 2_ by the due date.
 
 ```idris
 module AssRecRule
