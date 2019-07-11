@@ -46,8 +46,8 @@ bin/
 *.fls
 *.nav
 *.snm
-_*
 *.vrb
-
+_site/
 .idea/
 .idea_modules/
+.sass-cache/
