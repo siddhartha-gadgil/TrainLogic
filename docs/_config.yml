@@ -47,6 +47,9 @@ collections:
   notes:
     output: true
     permalink: /notes/:title
+  notebooks:
+    output: true
+    permalink: /notebooks/:title
 
 exclude: ["private/", "Code/", "Assignments/"]
 
@@ -66,3 +69,8 @@ defaults:
       type: notes
     values:
       layout: notes
+  - scope:
+      path: ""
+      type: notebooks
+    values:
+      layout: blank
