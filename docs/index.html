@@ -3,21 +3,21 @@ layout: default
 ---
   <div class="col-md-9">
 
-        <h1>MA 210: Logic, Types and Spaces </h1>
+        <h1>TrainLogic: Logic and Type theory </h1>
       <div id="desc" class="section">
-        <h3> Course Syllabus </h3>
+        <h3> Course Contents </h3>
           <p>
-            This course is an introduction to logic and foundations from both a modern point of view (based on type theory and its relations to topology) as well as in the traditional formulation based on first-order logic.
+            This course of lectures is an introduction to logic and type theory as background material for formal methods. 
           </p>
           <h4>Topics:</h4>
         <ul>
-
-          <li>Basic type theory: terms and types, function types, dependent types, inductive types.</li>
-          <li>First order logic: First order languages, deduction and truth, Models, Godel’s completeness and compactness theorems.</li>
-          <li>Church-Turing unsolvability theorems, Godel’s incompleteness theorem.</li>
-          <li>Homotopy Type Theory: propositions as types, the identity type family, topological view of the identity type, foundations of homotopy type theory.</li>
+          <li>First order logic.</li>
+          <li>Set theory.</li>
+          <li>Type theory.</li>
+          <li>Lambda Calculus</li>
         </ul>
-        <p>Most of the material will be developed using the dependently typed language <a href="https://www.idris-lang.org/" target="_blank">Idris</a>. Connections with programming in functional languages and the use of <em>dependent type theory</em> to integrate computations and proofs will be explored.
+        <p> The lectures will be complemented by software implementations and programming exercises.
+          The type theory material will be developed using the dependently typed language <a href="https://www.idris-lang.org/" target="_blank">Idris</a>. Connections with  the use of <em>dependent type theory</em> to integrate computations and proofs will be explored.
 </p>
 
         <p> The code for this course, including the live code in lectures is available in the <a href="https://github.com/siddhartha-gadgil/TrainLogic" target="_blank">repository</a> (the <em>octocat</em> on the top right corner also links to this). </p>
@@ -26,12 +26,6 @@ layout: default
 
       <h3>Aims, Background etc</h3>
       <p>The main aim of this course is to give a <em>self-contained</em> exposition of the (topological) foundations of mathematics and computation known as <em>Homotopy Type Theory</em>. These are foundations that are close to real-life mathematics, allow an integration of programs and proofs, and have deep connection with . </p>
-
-      <p> The only background assumed is some basic mathematics, in particular being comfortable with proofs and with the concept of continuity (at least over real numbers). Some familiarity with programming will be helpful, but mainly a willingness to learn and write code. In particular no familiarity with <em>Idris</em> or functional programming, or with formal logic, is assumed. </p>
-
-      <p>Note that the topic of this course is <strong>not</strong> a mature subject. In particular there is no book at this level. This will require some maturity and open-mindedness from the students.</p>
-
-      <p>To get a head-start on the course, I recommend <a href="https://www.idris-lang.org/download/" target="_blank">installing Idris</a>. Using Idris is pleasant, but installation can be painful. On Windows, I suggest using the binary on that page. If you are using linux, you may find this <a href="https://www.reddit.com/r/Idris/comments/6hw2cz/trouble_installing_idris/" target="_blank">answer</a> helpful (i.e., use <code>stack</code>). You may also wish to get familiar with the version control system <code>git</code>. </p>
 
 
       <div class="section" id ="Assignments">
@@ -69,11 +63,15 @@ layout: default
       <div id="refs" class="section">
         <h3>Suggested books</h3>
         <ol>
+          <li> Ebbinghaus, Flum and Thomas, <em>Mathematical Logic</em>, Springer-Verlag. </li>
+          <li> Martin-Lof, <em>Intutionist Type Theory.</em></li>
+          <li> Hindley and Seldin <em> Lambda-Calculus and Combinators: An Introduction</em>, Cambridge. </li>
           <li> Edwin Brady, <em>Type-Driven Development with Idris</em>, Manning Publications. </li>
           <li> <em>Homotopy Type Theory: Univalent Foundations of Mathematics</em>, Institute for Advanced Studies, Princeton 2013; available at <a href="http://homotopytypetheory.org/book/" target="_blank"> http://homotopytypetheory.org/book/</a>.</li>
-          <li> Manin, Yu. I., <em>A Course in Mathematical Logic for Mathematicians</em>, Second Edition ,Graduate Texts in Mathematics, Springer-Verlag, 2010. </li>
           <li> Srivastava, S. M., <em>A Course on Mathematical Logic</em>, Universitext, Springer-Verlag, 2008. </li>
-          <li> Abelson, Sussman and Sussman, <em>Structure and Interpretation of Computer Programs</em>, MIT Press, available at <a href="https://mitpress.mit.edu/sites/default/files/sicp/index.html" target="_blank">https://mitpress.mit.edu/sites/default/files/sicp/index.html</a>.</li>
+          <li> Manin, Yu. I., <em>A Course in Mathematical Logic for Mathematicians</em>, Second Edition ,Graduate Texts in Mathematics, Springer-Verlag, 2010. </li>
+          
+         
         </ol>
       </div>
 
