@@ -64,41 +64,44 @@ messageStyle: "none",
             <!-- <li><a href="{{ site.baseurl }}/index.html#refs">References</a></li>
             <li><a href="{{ site.baseurl }}/index.html#details">Details</a></li> -->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Assignments<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <!-- <li class="dropdown-header">Assignments</li> -->
-                <li class="dropdown-header"><strong>Exercises</strong></li>
-                {% assign sorted = (site.assignments | sort: 'date') | reverse %}
-                {% for ass in sorted  %}
-                <li>
-                  <a href="{{ site.baseurl }}{{ ass.url }}.html"> {{ ass.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-          </li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Links <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <!-- <li class="dropdown-header">Assignments</li> -->
+                  <!-- <li class="dropdown-header"><strong>Links</strong></li> -->
+  
+                  <li>
+                    <a href="http://www.event-b.org/" target="_blank">Event-b</a>
+                    <a href="https://www.methode-b.com/en/" target="_blank">B-method page</a>
+                    <a href="https://www.idris-lang.org/" target="_blank">Idris-lang</a> 
+                  </li>
+              </ul>
+            </li>
         
         <!-- <li><a href="{{ site.baseurl }}/notes-all.html">Notes</a></li> -->
       </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li> <a href="https://www.idris-lang.org/" target="_blank">Idris-lang</a> </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Links <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <!-- <li class="dropdown-header">Assignments</li> -->
-                <!-- <li class="dropdown-header"><strong>Links</strong></li> -->
-
-                <li>
-                  <a href="https://www.ias.edu/ideas/2014/voevodsky-origins" target="_blank"> Voevodsky: The Origins and Motivations of Univalent Foundations</a>
-                  <a href="https://mail.haskell.org/pipermail/haskell-cafe/2003-May/004343.html" target="_blank">Conor McBride on no total self-interpreters (following Turing)</a>
-                </li>
-            </ul>
-          </li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Exercises<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <!-- <li class="dropdown-header">Assignments</li> -->
+                    <li class="dropdown-header"><strong>(Placeholder only)</strong></li>
+                    {% assign sorted = (site.assignments | sort: 'date') | reverse %}
+                    {% for ass in sorted  %}
+                    <li>
+                      <a href="{{ site.baseurl }}{{ ass.url }}.html"> {{ ass.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+              </li>
+            
+            
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               Notebooks <span class="caret"></span></a>
             <ul class="dropdown-menu">
+                <li class="dropdown-header"><strong>(Placeholder only)</strong></li>
               <!-- <li class="dropdown-header">Assignments</li> -->
               {% assign sorted = (site.notebooks | sort: 'date')  %}
               {% for ass in sorted  %}
@@ -112,6 +115,7 @@ messageStyle: "none",
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               Notes <span class="caret"></span></a>
             <ul class="dropdown-menu">
+                <li class="dropdown-header"><strong>(Placeholder only)</strong></li>
               <!-- <li class="dropdown-header">Assignments</li> -->
               {% assign sorted = (site.notes | sort: 'date')  %}
               {% for ass in sorted  %}
