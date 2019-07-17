@@ -54,7 +54,7 @@ messageStyle: "none",
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          {{/*  <span class="navbar-brand">Instructor: <a href="http://math.iisc.ac.in/~gadgil" target="_blank">Siddhartha Gadgil</a></span>  */}}
+         
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -91,6 +91,20 @@ messageStyle: "none",
                     {% for ass in sorted  %}
                     <li>
                       <a href="{{ site.baseurl }}{{ ass.url }}.html"> {{ ass.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Slides<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <!-- <li class="dropdown-header">Assignments</li> -->
+                    <li class="dropdown-header"><strong>(Placeholder only)</strong></li>
+                    {% assign sorted = (site.slides | sort: 'date')  %}
+                    {% for ass in sorted  %}
+                    <li>
+                      <a href="{{ site.baseurl }}{{ ass.url }}.html" target="_blank"> {{ ass.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
