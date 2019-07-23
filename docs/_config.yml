@@ -44,6 +44,9 @@ collections:
   slides:
       output: true
       permalink: /reveal.js/:title
+  draft-slides:
+      output: true
+      permalink: /reveal.js/:title
   notes:
     output: true
     permalink: /notes/:title
@@ -62,6 +65,11 @@ defaults:
   - scope:
       path: ""
       type: slides
+    values:
+      layout: slides
+  - scope:
+      path: ""
+      type: "draft-slides"
     values:
       layout: slides
   - scope:
