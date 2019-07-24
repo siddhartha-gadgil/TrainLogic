@@ -95,7 +95,7 @@ date: 31 July 2019
         <ul>
             <li class="fragment">Formal proving takes work, so we have a trade-off between <em>productivity</em> and <em>safety</em>.</li>
             <li class="fragment">We have the same trade-off between dynamic and static typing; and often productivity wins.</li>
-            <li class="fragment">Better languages and tooling can help in getting safety without loosing too much productivity.</li>
+            <li class="fragment">Better languages and tooling can help in getting safety without losing too much productivity.</li>
         </ul>
     </section>
     <section>
@@ -116,7 +116,8 @@ date: 31 July 2019
             </li>
             <li class="fragment"> Computation can be founded on $\lambda$-calculus or two other <em>equivalent</em> models.</li>
             <li class="fragment"> <em>Type theory</em> gives common foundations integrating proofs and computations.</li>
-            <li class="fragment"> All these are based on <em>capabilities</em> to perform basic operation such as pattern matching on strings; and <em>agreement</em> on the meanings of such operations.</li>
+            <li class="fragment"> All these are based on <em>capabilities</em> to perform basic operation 
+                such as pattern matching on strings; and <em>agreement</em> on the meanings of such operations.</li>
         </ul>
     </section>
 </section>
@@ -124,7 +125,7 @@ date: 31 July 2019
     <section>
         <h2>Foundations</h2>
         <h3>of</h3>
-        <h2>Mathematics and Computation</h2>
+        <h2>Mathematics (and Computation)</h2>
     </section>
     <section>
         <ul>
@@ -147,9 +148,9 @@ date: 31 July 2019
         </ul>
     </section>
     <section>
-        <h2>Layers of foundations</h2>
+        <h3>Layers of foundations</h3>
         <ul>
-            <li> A <em>language</em> given by rules of its grammar/syntax that specifies well-formed expressions 
+            <li> A <em>language</em>, given by rules of its grammar/syntax, that specifies well-formed expressions 
                 as well as <em>types</em> of these expressions.</li>
             <li> Rules of <em>deduction</em> letting us conclude that a statement is true from other true statements.</li>
             <li> <em>Axioms</em>: statements that are known to be true. </li>
@@ -159,7 +160,7 @@ date: 31 July 2019
         </ul>
     </section>
     <section>
-        <h2>Generative grammars</h2>
+        <h3>Generative grammars</h3>
         <ul>
             <li>The languages we consider are given by
                 <ul>
@@ -173,7 +174,7 @@ date: 31 July 2019
         </ul>
     </section>
     <section>
-        <h2>Natural and programming languages</h2>
+        <h3>Natural and programming languages</h3>
         <ul>
             <li> For example in English
                 <ul>
@@ -189,21 +190,30 @@ date: 31 July 2019
         </ul>
     </section>
     <section>
-        <h2>Syntax based foundations</h2>
         <ul>
             <li> Thus, mathematical expressions and their types are determined by the syntax of a generative language.</li>
             <li> In particular, it is straightforward to generate all expressions, and to check the validity and type of an expression.</li>
-            <li> Similarly valid deductions are those given by repeated application of rules, which can be described in terms of syntax.</li>
+            <li> Similarly valid deductions are those given by repeated application of syntactic rules.</li>
             <li> For example, the rule <em>Modus Ponens</em> says that for formulas $P$ and $Q$, from $P$ and $P \implies Q$ we can deduce $Q$.</li>
+            <li> A specific class of such languages and rules of deduction constitute <em>First-order logic</em>, 
+                on which the usual foundations of mathematics are based.</li>
         </ul>
     </section>
     <section>
-        <h2>Semantics</h2>
+        <h3>Theories and Sets</h3>
         <ul>
-            <li> Thus, it is purely mechanical to check whether our deductions of a statement is correct.</li>
-            <li> However this may correspond to the wrong <em>real-world</em> statement.</li>
-            <li> We relate to the real world in two steps: first we make a <em>mathematical model</em> of the real world and relate syntax to this mathematical model.</li>
-            <li> The relation between the mathematical model and syntax is the logical relation between syntax and semantics. </li>
+            <li> A <em>theory</em> is a (first-order) language together with a collection of axioms, i.e., statements that are taken to be true.</li>
+            <li> A specific first-order language and set of axioms constitute Set Theory.</li>
+            <li> All of mathematics can be encoded in terms of Set Theory. However this is verbose and opaque, like Bytecode/assembly language .</li>
+            <li> Hence any practical formalization depends on using some combination of a proof assistant and more expressive foundations.</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Verification in the real world</h3>
+        <ul>
+            <li>The real-world problem needs to be (correctly) modelled mathematically/logically.</li>
+            <li>The mathematical model needs to be (correctly) embedded in Set theory or other appropriate foundations.</li>
+            <li>By results of logic, statements that are <em>deduced</em> following the rules of syntax are <em>true</em> in the Set Theoretic model.</li>
         </ul>
     </section>
 </section>
@@ -211,6 +221,53 @@ date: 31 July 2019
     <section>
         <h2>First-order Languages</h2>
     </section>
+    <section>
+        <h3>Data for a language</h3>
+        <ul>
+            <li>
+                First-order languages (e.g. Arithmetic, Sets) are specified by (possibly empty) lists of
+                <ul>
+                    <li>(names of) constants, e.g. $0$, $1$, $\phi$.</li>
+                    <li>(names of) functions together with their degree/arities, e.g., <em>addition</em> ($+$) with degree $2$.</li>
+                    <li>(names of) relations together with their degree/arities, e.g.,
+                         <em>less than</em> ($<$) and <em>belongs to</em> ($\in$) with degree $2$.</li>
+                    <li>(names of) variables - these can be assumed to be independent of the language.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h3>Expressions</h3>
+        <ul>
+                <li>We form two types of expressions:
+                        <ul>
+                            <li> <em>Terms:</em> representing numbers, sets etc.</li>
+                            <li> <em>Formulas:</em> representing properties of numbers, sets, etc. </li>
+                        </ul>     
+                    </li>
+                <li>Both terms and formulas may depend on variables.</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Terms</h3>
+        
+        <ul>Terms are expressions recursively given by the rules
+            <li>A variable $x$ is a term.</li>
+            <li>A constant $c$ is a term.</li>
+            <li> If $f$ is a function of degree $n$ and $t_1$, $t_2$, $\dots$, $t_n$ are terms then $f(t_1, t_2,\dots,t_n)$ is a term.</li>
+        </ul>
+    </section>
+    <section>
+            <h3>Formulas</h3>
+            
+            <ul>Formulas are expressions recursively given by the rules
+                <li> If $p$ is a relation of degree $n$ and $t_1$, $t_2$, $\dots$, $t_n$ are terms then $p(t_1, t_2,\dots,t_n)$ is a term.</li>
+                <li> If $P$ and $Q$ are formulas then $P\wedge Q$, $P\vee Q$,  $P\implies Q$, $P\iff Q$, and $\neg P$ are formulas. </li>
+                <li> If $P$ is a formula and $x$ is a variable, then $\forall x P$ and $\exists x P$ are formulas.</li>
+                <li> We recursively define <em>free variables</em> of terms and formulas. A formula is <em>closed</em> if it has no free variables.</li>
+            </ul>
+        </section>
+    
 </section>
 <section>
     <section>
