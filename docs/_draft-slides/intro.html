@@ -16,30 +16,108 @@ date: 31 July 2019
 <section>
     <section>
         <h2>Formal Methods</h2>
+        <p>Mathematical proofs checked by computers.</p>
     </section>
     <section>
         <h3>The Pentium FDIV bug</h3>
+        <ul>
+            <li class="fragment">
+                    Thomas Nicely, a professor of mathematics at Lynchburg College, had written code to enumerate primes, 
+                    twin primes, prime triplets, and prime quadruplets.
+            </li>
+            <li class="fragment">
+                    Nicely noticed some inconsistencies in the calculations shortly after adding a Pentium system to his group of computers</li>
+                    <li class="fragment">
+                    After eliminating other factors he reported the issue to Intel.
+            </li>
+        </ul>
+    </section>
+    <section>
+            <ul>
+                <li> This was a bug in the pentium chip due to missing entries in the lookup table used by the floating-point division circuitry.</li>
+                <li class="fragment"> This bug had escaped testing. </li>
+                <li class="fragment">
+                        This caused Intel to take a $475M charge against earnings and management "don't ever let this happen again".
+                </li>
+                <li class="fragment"> In 1996 they started proving properties of the Pentium processor FPU.</li>
+               
+            </ul>
+    </section>
+    <section>
+        <ul>
+                <li> Then in 1997 a bug was discovered in the FIST instruction (that converts floating point numbers to integers) 
+                    in the formally verified correct Pentium Pro FPU.</li>
+                <li class="fragment">  It was a protocol mismatch between two blocks not accounted for in the informal arguments. </li>
+                <li class="fragment">So they went back to square one and during 1997-98 the verified the entire FPU against high-level specs 
+                    so that mismatches like the FIST bug could no longer escape. </li>
+                <li class="fragment">During 1997-99 the Pentium 4 processor was verified and there were no escapes.</li>
+        </ul>
     </section>
     <section>
         <h3>TimSort</h3>
+        <ul>
+            <li>Tim Peters developed the Timsort hybrid sorting algorithm in 2002 - this is the standard sorting algorithm in Java, Android, Python etc.</li>
+            <li>It is a clever combination of ideas from merge sort and insertion sort, and designed to perform well on real world data.</li>
+            <li>Specifically, data is grouped into <em>runs</em>, sequences that are already ordered, using <em>insertion sort</em> if needed. 
+                Runs are merged as in <em>merge sort</em>.</li>
+            <li>Run lengths are stored on a stack, which should be small for performance reasons.</li>
+        </ul>
     </section>
     <section>
-        <h3>TimSort and formal methods</h3>
+        <ul>
+            <li> After having successfully verified Counting and Radix sort implementations in Java, the Dutch-German <em>Envisage</em> group 
+                turned to proving the correctness of TimSort.</li>
+            <li> After struggling to prove this, they realized they could not because the implementation was in fact wrong.</li>
+            <li> Specifically the size of the stack for run lengths was estimated based on a (growth) property of run lengths, but this did not always hold.</li>
+            <li> They proved that a modified version of the property holds, and a corresponding algorithm does work.</li>
+        </ul>
     </section>
     <section>
         <h3>Conclusions from TimSort</h3>
+        <ul>
+            <li>Formal methods are often classified as irrelevant and/or impracticable by practitioners. 
+                This is not true: the researchers found and fixed a bug in a piece of software that is used by billions of users every single day.</li>
+            <li>Even though the bug itself is unlikely to occur, it is easy to see how it could be used in an attack.</li>
+        </ul>
     </section>
     <section>
-        <h3>Use formal proofs?</h3>
+        <h3>Using Formal methods</h3>
+        <ul>
+            <li class="fragment">Formal methods are mathematical proofs checked by computers.</li>
+            <li class="fragment">What are mathematical proofs?</li>
+            <li class="fragment">How do we know that the program checking the proof is correct?</li>
+            <li class="fragment">Why does everyone not do so already?</li>
+        </ul>
+        
     </section>
     <section>
         <h3>Why not always?</h3>
+        <ul>
+            <li class="fragment">Formal proving takes work, so we have a trade-off between <em>productivity</em> and <em>safety</em>.</li>
+            <li class="fragment">We have the same trade-off between dynamic and static typing; and often productivity wins.</li>
+            <li class="fragment">Better languages and tooling can help in getting safety without loosing too much productivity.</li>
+        </ul>
     </section>
     <section>
         <h3>Who guards the guards?</h3>
+        <ul>
+            <li class="fragment">Formal proof systems have a small <em>trusted kernel</em>.</li>
+            <li class="fragment">All proofs are verified, directly or indirectly, by the kernel.</li>
+            <li class="fragment">The trusted kernel itself should be checked independently and thoroughly several times.</li>
+            <li class="fragment">For example, <em>lean theorem prover</em> has independent type checkers (i.e. kernels) in three languages.</li>
+        </ul>
+        
     </section>
     <section>
-        <h3>Foundations</h3>
+        <h3>Foundations: Logic, Sets, Types</h3>
+        <ul>
+            <li class="fragment">
+                The usual foundations of mathematics are <em>Set Theory</em> as a theory in <em>First-order logic</em>. 
+            </li>
+            <li class="fragment"> Computation can be founded on $\lambda$-calculus or two other <em>equivalent</em> models.</li>
+            <li class="fragment"> <em>Type theory</em> gives common foundations integrating proofs and computations.</li>
+            <li class="fragment"> All these are based on <em>capabilities</em> to perform basic operation such as pattern matching on strings; and <em>agreement</em> on the meanings of such operations.</li>
+        </ul>
     </section>
 </section>
 <section>
