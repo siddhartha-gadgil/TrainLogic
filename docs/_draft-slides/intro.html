@@ -126,6 +126,69 @@ date: 31 July 2019
         <h3>of</h3>
         <h2>Mathematics and Computation</h2>
     </section>
+    <section>
+        <ul>
+            <li>
+                Decide whether the following are true or false.
+                <ul>
+                    <li>$2 < 3$</li>
+                    <li>$ 3 > 4$</li>
+                    <li> $3 + 12$</li>
+                    <li> $3 += 4++ $</li>
+                </ul>
+            </li>
+            <li> 
+                We can only ask whether an expression is true or false provided:
+                <ul>
+                    <li> It is a <em>well-formed</em> (meaningful) expression.</li>
+                    <li> It represents a <em>statement</em> (not an object such as a number or set).</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Layers of foundations</h2>
+        <ul>
+            <li> A <em>language</em> given by rules of its grammar/syntax that specifies well-formed expressions 
+                as well as <em>types</em> of these expressions.</li>
+            <li> Rules of <em>deduction</em> letting us conclude that a statement is true from other true statements.</li>
+            <li> <em>Axioms</em>: statements that are known to be true. </li>
+            <li> Rules are <em>syntactic</em> in nature, i.e., in terms of manipulating and pattern matching strings, 
+            </li>
+            <li>Rules can be computed quickly.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Generative grammars</h2>
+        <ul>
+            <li>The languages we consider are given by
+                <ul>
+                    <li>an initial vocabulary of expressions (with types),</li>
+                    <li>(introduction) rules to form new expressions from existing ones and assigning types to these,</li>
+                    <li>such that the rules depend only on the types of the expressions.</li>
+                </ul>
+            </li>
+            <li>Well-formed expressions are exactly those that can be formed from the vocabulary using the introduction rules.</li>
+            <li>We can prove properties of such expressions by induction.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Natural and programming languages</h2>
+        <ul>
+            <li> For example in English
+                <ul>
+                    <li>The vocabulary has nouns, verbs, adjectives etc.</li>
+                    <li>A single noun forms a noun phrase, e.g. <code>lecture</code>.</li>
+                    <li>An adjective followed by a noun phrase forms a noun phrase, e.g. <code>boring lecture</code>.</li>
+                </ul>
+            </li>
+            <li> Similarly, in most programming languages if <code>x</code> and <code>y</code> are expressions 
+                with type <code>Int</code>, we can form the expression <code>x + y</code> of type <code>Int</code>.</li>
+            <li>But: "colourless green ideas sleep furiously." </li>
+            <li> We can also form the expression <code>x < y</code> of type <code>Boolean</code>.</li>
+            
+        </ul>
+    </section>
 </section>
 <section>
     <section>
