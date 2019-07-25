@@ -260,8 +260,9 @@ date: 31 July 2019
     <section>
             <h3>Formulas</h3>
             
-            <ul>Formulas are expressions recursively given by the rules
+            <ul>Formulas are recursively given by:
                 <li> If $p$ is a relation of degree $n$ and $t_1$, $t_2$, $\dots$, $t_n$ are terms then $p(t_1, t_2,\dots,t_n)$ is a term.</li>
+                <li> If $t_1$ and $t_2$ are terms, then $t_1 = t_2$ is a formula.</li>
                 <li> If $P$ and $Q$ are formulas then $P\wedge Q$, $P\vee Q$,  $P\implies Q$, $P\iff Q$, and $\neg P$ are formulas. </li>
                 <li> If $P$ is a formula and $x$ is a variable, then $\forall x P$ and $\exists x P$ are formulas.</li>
                 <li> We recursively define <em>free variables</em> of terms and formulas. A formula is <em>closed</em> if it has no free variables.</li>
@@ -272,5 +273,53 @@ date: 31 July 2019
 <section>
     <section>
         <h2>Set Theory</h2>
+    </section>
+    <section>
+        <h3>Sets as collections</h3>
+        <ul>
+            <li> A <em>Set</em> $S$ is a collection of objects, with no other structure.</li>
+            <li> Thus, we have a relation $x \in S$, for any object $x$, corresponding to $x$ being a member of $S$.</li>
+            <li> Further, if $S$ and $T$ are sets with the <em>same</em> members they are equal, i.e. if 
+                $$\forall x\ x\in S \iff x\in T$$
+                then $S= T$ <strong>(Axiom of extension)</strong>.
+             </li>
+        </ul>
+    </section>
+    <section>
+        <h3>What collections?</h3>
+        <ul>
+            <li> We need some way to construct sets.</li>
+            <li> A natural way to try to do this is to say sets are collections of objects that satisfy some <em>property</em>, e.g. 
+             $$\{p: \text{$p$ is a prime number} \}.$$ </li>
+            <li> We can make this formal by defining properties to be <em>closed formulas</em> in some first-order language 
+                (or in the first-order language of sets).</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Russell's Paradox</h3>
+        <ul>
+            <li>Assume we had sets corresponding to all closed formulas in the first-order language of sets.</li>
+            <li> Consider the set 
+                $$ S = \{X : X \notin X\}.$$ </li>
+            <li><strong>Question:</strong> Is $S\in S$?</li>
+            <li>
+                We see that
+                <ul>
+                    <li> if $S \notin S$ then $S \in S$,</li>
+                    <li> if $S\in S$ then $S \notin S$.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h3>Sets from Axioms</h3>
+        <ul>
+            <li> The <em>axiom of specification</em> allows us to define <em>subsets</em> of a set by a property.</li>
+            <li> Thus, if we have previously defined the natural numbers $\mathbb{N}$, then we can define the set
+                    $$\{p: \text{$p$ is a prime number} \}.$$ 
+            </li>
+            <li> All axioms of set theory except <em>extension</em> are statements giving us the existence of sets.</li>
+            <li> The simplest of these is: "there exists a set"! </li>
+        </ul>
     </section>
 </section>
