@@ -56,28 +56,28 @@ date: 31 July 2019
     <section>
         <h3>TimSort</h3>
         <ul>
-            <li>Tim Peters developed the Timsort hybrid sorting algorithm in 2002 - this is the standard sorting algorithm in Java, Android, Python etc.</li>
-            <li>It is a clever combination of ideas from merge sort and insertion sort, and designed to perform well on real world data.</li>
-            <li>Specifically, data is grouped into <em>runs</em>, sequences that are already ordered, using <em>insertion sort</em> if needed. 
+            <li class="fragment">Tim Peters developed the Timsort hybrid sorting algorithm in 2002 - this is the standard sorting algorithm in Java, Android, Python etc.</li>
+            <li class="fragment">It is a clever combination of ideas from merge sort and insertion sort, and designed to perform well on real world data.</li>
+            <li class="fragment">Specifically, data is grouped into <em>runs</em>, sequences that are already ordered, using <em>insertion sort</em> if needed. 
                 Runs are merged as in <em>merge sort</em>.</li>
-            <li>Run lengths are stored on a stack, which should be small for performance reasons.</li>
+            <li class="fragment">Run lengths are stored on a stack, which should be small for performance reasons.</li>
         </ul>
     </section>
     <section>
         <ul>
             <li> After having successfully verified Counting and Radix sort implementations in Java, the Dutch-German <em>Envisage</em> group 
                 turned to proving the correctness of TimSort.</li>
-            <li> After struggling to prove this, they realized they could not because the implementation was in fact wrong.</li>
-            <li> Specifically the size of the stack for run lengths was estimated based on a (growth) property of run lengths, but this did not always hold.</li>
-            <li> They proved that a modified version of the property holds, and a corresponding algorithm does work.</li>
+            <li class="fragment"> After struggling to prove this, they realized they could not because the implementation was in fact wrong.</li>
+            <li class="fragment"> Specifically the size of the stack for run lengths was estimated based on a (growth) property of run lengths, but this did not always hold.</li>
+            <li class="fragment"> They proved that a modified version of the property holds, and a corresponding algorithm does work.</li>
         </ul>
     </section>
     <section>
         <h3>Conclusions from TimSort</h3>
         <ul>
-            <li>Formal methods are often classified as irrelevant and/or impracticable by practitioners. 
+            <li class="fragment">Formal methods are often classified as irrelevant and/or impracticable by practitioners. 
                 This is not true: the researchers found and fixed a bug in a piece of software that is used by billions of users every single day.</li>
-            <li>Even though the bug itself is unlikely to occur, it is easy to see how it could be used in an attack.</li>
+            <li class="fragment">Even though the bug itself is unlikely to occur, it is easy to see how it could be used in an attack.</li>
         </ul>
     </section>
     <section>
@@ -132,17 +132,17 @@ date: 31 July 2019
             <li>
                 Decide whether the following are true or false.
                 <ul>
-                    <li>$2 < 3$</li>
-                    <li>$ 3 > 4$</li>
-                    <li> $3 + 12$</li>
-                    <li> $3 += 4++ $</li>
+                    <li class="fragment">$2 < 3$</li>
+                    <li class="fragment">$ 3 > 4$</li>
+                    <li class="fragment"> $3 + 12$</li>
+                    <li class="fragment"> $3 += 4++ $</li>
                 </ul>
             </li>
-            <li> 
+            <li class="fragment"> 
                 We can only ask whether an expression is true or false provided:
                 <ul>
-                    <li> It is a <em>well-formed</em> (meaningful) expression.</li>
-                    <li> It represents a <em>statement</em> (not an object such as a number or set).</li>
+                    <li class="fragment"> It is a <em>well-formed</em> (meaningful) expression.</li>
+                    <li class="fragment"> It represents a <em>statement</em> (not an object such as a number or set).</li>
                 </ul>
             </li>
         </ul>
@@ -150,70 +150,70 @@ date: 31 July 2019
     <section>
         <h3>Layers of foundations</h3>
         <ul>
-            <li> A <em>language</em>, given by rules of its grammar/syntax, that specifies well-formed expressions 
+            <li class="fragment"> A <em>language</em>, given by rules of its grammar/syntax, that specifies well-formed expressions 
                 as well as <em>types</em> of these expressions.</li>
-            <li> Rules of <em>deduction</em> letting us conclude that a statement is true from other true statements.</li>
-            <li> <em>Axioms</em>: statements that are known to be true. </li>
-            <li> Rules are <em>syntactic</em> in nature, i.e., in terms of manipulating and pattern matching strings, 
+            <li class="fragment"> Rules of <em>deduction</em> letting us conclude that a statement is true from other true statements.</li>
+            <li class="fragment"> <em>Axioms</em>: statements that are known to be true. </li>
+            <li class="fragment"> Rules are <em>syntactic</em> in nature, i.e., in terms of manipulating and pattern matching strings, 
             </li>
-            <li>Rules can be computed quickly.</li>
+            <li class="fragment">Rules can be computed quickly.</li>
         </ul>
     </section>
     <section>
         <h3>Generative grammars</h3>
         <ul>
-            <li>The languages we consider are given by
+            <li class="fragment">The languages we consider are given by
                 <ul>
-                    <li>an initial vocabulary of expressions (with types),</li>
-                    <li>(introduction) rules to form new expressions from existing ones and assigning types to these,</li>
-                    <li>such that the rules depend only on the types of the expressions.</li>
+                    <li class="fragment">an initial vocabulary of expressions (with types),</li>
+                    <li class="fragment">(introduction) rules to form new expressions from existing ones and assigning types to these,</li>
+                    <li class="fragment">such that the rules depend only on the types of the expressions.</li>
                 </ul>
             </li>
-            <li>Well-formed expressions are exactly those that can be formed from the vocabulary using the introduction rules.</li>
-            <li>We can prove properties of such expressions by induction.</li>
+            <li class="fragment">Well-formed expressions are exactly those that can be formed from the vocabulary using the introduction rules.</li>
+            <li class="fragment">We can prove properties of such expressions by induction.</li>
         </ul>
     </section>
     <section>
         <h3>Natural and programming languages</h3>
         <ul>
-            <li> For example in English
+            <li class="fragment"> For example in English
                 <ul>
-                    <li>The vocabulary has nouns, verbs, adjectives etc.</li>
-                    <li>A single noun forms a noun phrase, e.g. <code>lecture</code>.</li>
-                    <li>An adjective followed by a noun phrase forms a noun phrase, e.g. <code>boring lecture</code>.</li>
+                    <li class="fragment">The vocabulary has nouns, verbs, adjectives etc.</li>
+                    <li class="fragment">A single noun forms a noun phrase, e.g. <code>lecture</code>.</li>
+                    <li class="fragment">An adjective followed by a noun phrase forms a noun phrase, e.g. <code>boring lecture</code>.</li>
                 </ul>
             </li>
-            <li> Similarly, in most programming languages if <code>x</code> and <code>y</code> are expressions 
+            <li class="fragment"> Similarly, in most programming languages if <code>x</code> and <code>y</code> are expressions 
                 with type <code>Int</code>, we can form the expression <code>x + y</code> of type <code>Int</code>.</li>
-            <li> We can also form the <code>Boolean</code> expression <code>x < y</code>.</li>
+            <li class="fragment"> We can also form the <code>Boolean</code> expression <code>x < y</code>.</li>
             
         </ul>
     </section>
     <section>
         <ul>
             <li> Thus, mathematical expressions and their types are determined by the syntax of a generative language.</li>
-            <li> In particular, it is straightforward to generate all expressions, and to check the validity and type of an expression.</li>
-            <li> Similarly valid deductions are those given by repeated application of syntactic rules.</li>
-            <li> For example, the rule <em>Modus Ponens</em> says that for formulas $P$ and $Q$, from $P$ and $P \implies Q$ we can deduce $Q$.</li>
-            <li> A specific class of such languages and rules of deduction constitute <em>First-order logic</em>, 
+            <li class="fragment"> In particular, it is straightforward to generate all expressions, and to check the validity and type of an expression.</li>
+            <li class="fragment"> Similarly valid deductions are those given by repeated application of syntactic rules.</li>
+            <li class="fragment"> For example, the rule <em>Modus Ponens</em> says that for formulas $P$ and $Q$, from $P$ and $P \implies Q$ we can deduce $Q$.</li>
+            <li class="fragment"> A specific class of such languages and rules of deduction constitute <em>First-order logic</em>, 
                 on which the usual foundations of mathematics are based.</li>
         </ul>
     </section>
     <section>
         <h3>Theories and Sets</h3>
         <ul>
-            <li> A <em>theory</em> is a (first-order) language together with a collection of axioms, i.e., statements that are taken to be true.</li>
-            <li> A specific first-order language and set of axioms constitute Set Theory.</li>
-            <li> All of mathematics can be encoded in terms of Set Theory. However this is verbose and opaque, like Bytecode/assembly language .</li>
-            <li> Hence any practical formalization depends on using some combination of a proof assistant and more expressive foundations.</li>
+            <li class="fragment"> A <em>theory</em> is a (first-order) language together with a collection of axioms, i.e., statements that are taken to be true.</li>
+            <li class="fragment"> A specific first-order language and set of axioms constitute Set Theory.</li>
+            <li class="fragment"> All of mathematics can be encoded in terms of Set Theory. However this is verbose and opaque, like Bytecode/assembly language .</li>
+            <li class="fragment"> Hence any practical formalization depends on using some combination of a proof assistant and more expressive foundations.</li>
         </ul>
     </section>
     <section>
         <h3>Verification in the real world</h3>
         <ul>
-            <li>The real-world problem needs to be (correctly) modelled mathematically/logically.</li>
-            <li>The mathematical model needs to be (correctly) embedded in Set theory or other appropriate foundations.</li>
-            <li>By results of logic, statements that are <em>deduced</em> following the rules of syntax are <em>true</em> in the Set Theoretic model.</li>
+            <li class="fragment">The real-world problem needs to be (correctly) modelled mathematically/logically.</li>
+            <li class="fragment">The mathematical model needs to be (correctly) embedded in Set theory or other appropriate foundations.</li>
+            <li class="fragment">By results of logic, statements that are <em>deduced</em> following the rules of syntax are <em>true</em> in the Set Theoretic model.</li>
         </ul>
     </section>
 </section>
@@ -224,14 +224,14 @@ date: 31 July 2019
     <section>
         <h3>Data for a language</h3>
         <ul>
-            <li>
+            <li class="fragment">
                 First-order languages (e.g. Arithmetic, Sets) are specified by (possibly empty) lists of
                 <ul>
-                    <li>(names of) constants, e.g. $0$, $1$, $\phi$.</li>
-                    <li>(names of) functions together with their degree/arities, e.g., <em>addition</em> ($+$) with degree $2$.</li>
-                    <li>(names of) relations together with their degree/arities, e.g.,
+                    <li class="fragment">(names of) constants, e.g. $0$, $1$, $\phi$.</li>
+                    <li class="fragment">(names of) functions together with their degree/arities, e.g., <em>addition</em> ($+$) with degree $2$.</li>
+                    <li class="fragment">(names of) relations together with their degree/arities, e.g.,
                          <em>less than</em> ($<$) and <em>belongs to</em> ($\in$) with degree $2$.</li>
-                    <li>(names of) variables - these can be assumed to be independent of the language.</li>
+                    <li class="fragment">(names of) variables - these can be assumed to be independent of the language.</li>
                 </ul>
             </li>
         </ul>
@@ -239,87 +239,86 @@ date: 31 July 2019
     <section>
         <h3>Expressions</h3>
         <ul>
-                <li>We form two types of expressions:
+                <li class="fragment">We form two types of expressions:
                         <ul>
-                            <li> <em>Terms:</em> representing numbers, sets etc.</li>
-                            <li> <em>Formulas:</em> representing properties of numbers, sets, etc. </li>
+                            <li class="fragment"> <em>Terms:</em> representing numbers, sets etc.</li>
+                            <li class="fragment"> <em>Formulas:</em> representing properties of numbers, sets, etc. </li>
                         </ul>     
                     </li>
-                <li>Both terms and formulas may depend on variables.</li>
+                <li class="fragment">Both terms and formulas may depend on variables.</li>
         </ul>
     </section>
     <section>
         <h3>Terms</h3>
         
         <ul>Terms are expressions recursively given by the rules
-            <li>A variable $x$ is a term.</li>
-            <li>A constant $c$ is a term.</li>
-            <li> If $f$ is a function of degree $n$ and $t_1$, $t_2$, $\dots$, $t_n$ are terms then $f(t_1, t_2,\dots,t_n)$ is a term.</li>
+            <li class="fragment">A variable $x$ is a term.</li>
+            <li class="fragment">A constant $c$ is a term.</li>
+            <li class="fragment"> If $f$ is a function of degree $n$ and $t_1$, $t_2$, $\dots$, $t_n$ are terms then $f(t_1, t_2,\dots,t_n)$ is a term.</li>
         </ul>
     </section>
     <section>
             <h3>Formulas</h3>
             
-            <ul>Formulas are recursively given by:
-                <li> If $p$ is a relation of degree $n$ and $t_1$, $t_2$, $\dots$, $t_n$ are terms then $p(t_1, t_2,\dots,t_n)$ is a term.</li>
-                <li> If $t_1$ and $t_2$ are terms, then $t_1 = t_2$ is a formula.</li>
-                <li> If $P$ and $Q$ are formulas then $P\wedge Q$, $P\vee Q$,  $P\implies Q$, $P\iff Q$, and $\neg P$ are formulas. </li>
-                <li> If $P$ is a formula and $x$ is a variable, then $\forall x P$ and $\exists x P$ are formulas.</li>
-                <li> We recursively define <em>free variables</em> of terms and formulas. A formula is <em>closed</em> if it has no free variables.</li>
+            <ul>Formulas are expressions recursively given by the rules
+                <li class="fragment"> If $p$ is a relation of degree $n$ and $t_1$, $t_2$, $\dots$, $t_n$ are terms then $p(t_1, t_2,\dots,t_n)$ is a term.</li>
+                <li class="fragment"> If $P$ and $Q$ are formulas then $P\wedge Q$, $P\vee Q$,  $P\implies Q$, $P\iff Q$, and $\neg P$ are formulas. </li>
+                <li class="fragment"> If $P$ is a formula and $x$ is a variable, then $\forall x P$ and $\exists x P$ are formulas.</li>
+                <li class="fragment"> We recursively define <em>free variables</em> of terms and formulas. A formula is <em>closed</em> if it has no free variables.</li>
             </ul>
         </section>
     
 </section>
 <section>
-    <section>
-        <h2>Set Theory</h2>
-    </section>
-    <section>
-        <h3>Sets as collections</h3>
-        <ul>
-            <li> A <em>Set</em> $S$ is a collection of objects, with no other structure.</li>
-            <li> Thus, we have a relation $x \in S$, for any object $x$, corresponding to $x$ being a member of $S$.</li>
-            <li> Further, if $S$ and $T$ are sets with the <em>same</em> members they are equal, i.e. if 
-                $$\forall x\ x\in S \iff x\in T$$
-                then $S= T$ <strong>(Axiom of extension)</strong>.
-             </li>
-        </ul>
-    </section>
-    <section>
-        <h3>What collections?</h3>
-        <ul>
-            <li> We need some way to construct sets.</li>
-            <li> A natural way to try to do this is to say sets are collections of objects that satisfy some <em>property</em>, e.g. 
-             $$\{p: \text{$p$ is a prime number} \}.$$ </li>
-            <li> We can make this formal by defining properties to be <em>closed formulas</em> in some first-order language 
-                (or in the first-order language of sets).</li>
-        </ul>
-    </section>
-    <section>
-        <h3>Russell's Paradox</h3>
-        <ul>
-            <li>Assume we had sets corresponding to all closed formulas in the first-order language of sets.</li>
-            <li> Consider the set 
-                $$ S = \{X : X \notin X\}.$$ </li>
-            <li><strong>Question:</strong> Is $S\in S$?</li>
-            <li>
-                We see that
+        <section>
+                <h2>Set Theory</h2>
+            </section>
+            <section>
+                <h3>Sets as collections</h3>
                 <ul>
-                    <li> if $S \notin S$ then $S \in S$,</li>
-                    <li> if $S\in S$ then $S \notin S$.</li>
+                    <li class="fragment"> A <em>Set</em> $S$ is a collection of objects, with no other structure.</li>
+                    <li class="fragment"> Thus, we have a relation $x \in S$, for any object $x$, corresponding to $x$ being a member of $S$.</li>
+                    <li class="fragment"> Further, if $S$ and $T$ are sets with the <em>same</em> members they are equal, i.e. if 
+                        $$\forall x\ x\in S \iff x\in T$$
+                        then $S= T$ <strong>(Axiom of extension)</strong>.
+                     </li>
                 </ul>
-            </li>
-        </ul>
-    </section>
-    <section>
-        <h3>Sets from Axioms</h3>
-        <ul>
-            <li> The <em>axiom of specification</em> allows us to define <em>subsets</em> of a set by a property.</li>
-            <li> Thus, if we have previously defined the natural numbers $\mathbb{N}$, then we can define the set
-                    $$\{p: \text{$p$ is a prime number} \}.$$ 
-            </li>
-            <li> All axioms of set theory except <em>extension</em> are statements giving us the existence of sets.</li>
-            <li> The simplest of these is: "there exists a set"! </li>
-        </ul>
-    </section>
+            </section>
+            <section>
+                <h3>What collections?</h3>
+                <ul>
+                    <li class="fragment"> We need some way to construct sets.</li>
+                    <li class="fragment"> A natural way to try to do this is to say sets are collections of objects that satisfy some <em>property</em>, e.g. 
+                     $$\{p: \text{$p$ is a prime number} \}.$$ </li>
+                    <li class="fragment"> We can make this formal by defining properties to be <em>closed formulas</em> in some first-order language 
+                        (or in the first-order language of sets).</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Russell's Paradox</h3>
+                <ul>
+                    <li class="fragment">Assume we had sets corresponding to all closed formulas in the first-order language of sets.</li>
+                    <li class="fragment"> Consider the set 
+                        $$ S = \{X : X \notin X\}.$$ </li>
+                    <li class="fragment"><strong>Question:</strong> Is $S\in S$?</li>
+                    <li class="fragment">
+                        We see that
+                        <ul>
+                            <li class="fragment"> if $S \notin S$ then $S \in S$,</li>
+                            <li class="fragment"> if $S\in S$ then $S \notin S$.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Sets from Axioms</h3>
+                <ul>
+                    <li class="fragment"> The <em>axiom of specification</em> allows us to define <em>subsets</em> of a set by a property.</li>
+                    <li class="fragment"> Thus, if we have previously defined the natural numbers $\mathbb{N}$, then we can define the set
+                            $$\{p: \text{$p$ is a prime number} \}.$$ 
+                    </li>
+                    <li class="fragment"> All axioms of set theory except <em>extension</em> are statements giving us the existence of sets.</li>
+                    <li class="fragment"> The simplest of these is: "there exists a set"! </li>
+                </ul>
+            </section>
 </section>
