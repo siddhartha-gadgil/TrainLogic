@@ -93,7 +93,7 @@ messageStyle: "none",
                     Slides<span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <!-- <li class="dropdown-header">Assignments</li> -->
-                    <li class="dropdown-header"><strong>(Placeholder only)</strong></li>
+                    {{/*  <li class="dropdown-header"><strong>(Placeholder only)</strong></li>  */}}
                     {% assign sorted = (site.slides | sort: 'date')  %}
                     {% for ass in sorted  %}
                     <li>

@@ -37,7 +37,7 @@ date: 31 July 2019
                 <li> This was a bug in the pentium chip due to missing entries in the lookup table used by the floating-point division circuitry.</li>
                 <li class="fragment"> This bug had escaped testing. </li>
                 <li class="fragment">
-                        This caused Intel to take a $475M charge against earnings and management "don't ever let this happen again".
+                        This caused Intel to take a $475M charge against earnings and the management said "don't ever let this happen again".
                 </li>
                 <li class="fragment"> In 1996 they started proving properties of the Pentium processor FPU.</li>
                
@@ -154,7 +154,7 @@ date: 31 July 2019
                 as well as <em>types</em> of these expressions.</li>
             <li class="fragment"> Rules of <em>deduction</em> letting us conclude that a statement is true from other true statements.</li>
             <li class="fragment"> <em>Axioms</em>: statements that are known to be true. </li>
-            <li class="fragment"> Rules are <em>syntactic</em> in nature, i.e., in terms of manipulating and pattern matching strings, 
+            <li class="fragment"> Rules are <em>syntactic</em> in nature, i.e., in terms of manipulating and pattern matching strings.
             </li>
             <li class="fragment">Rules can be computed quickly.</li>
         </ul>
@@ -183,7 +183,7 @@ date: 31 July 2019
                     <li class="fragment">An adjective followed by a noun phrase forms a noun phrase, e.g. <code>boring lecture</code>.</li>
                 </ul>
             </li>
-            <li class="fragment"> Similarly, in most programming languages if <code>x</code> and <code>y</code> are expressions 
+            <li class="fragment"> Similarly, in most programming languages, if <code>x</code> and <code>y</code> are expressions 
                 with type <code>Int</code>, we can form the expression <code>x + y</code> of type <code>Int</code>.</li>
             <li class="fragment"> We can also form the <code>Boolean</code> expression <code>x < y</code>.</li>
             
@@ -191,7 +191,7 @@ date: 31 July 2019
     </section>
     <section>
         <ul>
-            <li> Thus, mathematical expressions and their types are determined by the syntax of a generative language.</li>
+            <li> Mathematical expressions and their types are determined by the syntax of a generative language.</li>
             <li class="fragment"> In particular, it is straightforward to generate all expressions, and to check the validity and type of an expression.</li>
             <li class="fragment"> Similarly valid deductions are those given by repeated application of syntactic rules.</li>
             <li class="fragment"> For example, the rule <em>Modus Ponens</em> says that for formulas $P$ and $Q$, from $P$ and $P \implies Q$ we can deduce $Q$.</li>
@@ -285,13 +285,31 @@ date: 31 July 2019
                 </ul>
             </section>
             <section>
+                <h3>Language of Sets</h3>
+                <ul>
+                    <li>We have a first-order language that describes sets with
+                        <ul>
+                            <li> a single relation $\in$ (is a member of) of degree $2$.</li>
+                            <li> a single constant $\phi$ (the empty set).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        For example, the axiom of extensionality can be described in this language by the formula 
+                        $$\forall x\forall y (\forall a\ a\in x \iff a \in y) \implies x = y.$$
+                    </li>
+                    <li>Here everything is a set, including members of sets.</li>
+                </ul>
+
+            </section>
+
+            <section>
                 <h3>What collections?</h3>
                 <ul>
                     <li class="fragment"> We need some way to construct sets.</li>
                     <li class="fragment"> A natural way to try to do this is to say sets are collections of objects that satisfy some <em>property</em>, e.g. 
                      $$\{p: \text{$p$ is a prime number} \}.$$ </li>
-                    <li class="fragment"> We can make this formal by defining properties to be <em>closed formulas</em> in some first-order language 
-                        (or in the first-order language of sets).</li>
+                    <li class="fragment"> We can make this formal by, for example, defining properties to be <em>closed formulas</em> 
+                        in the first-order language of sets (alternatively as closed formulas in some first-order language).</li>
                 </ul>
             </section>
             <section>
@@ -318,7 +336,6 @@ date: 31 July 2019
                             $$\{p: \text{$p$ is a prime number} \}.$$ 
                     </li>
                     <li class="fragment"> All axioms of set theory except <em>extension</em> are statements giving us the existence of sets.</li>
-                    <li class="fragment"> The simplest of these is: "there exists a set"! </li>
                 </ul>
             </section>
 </section>

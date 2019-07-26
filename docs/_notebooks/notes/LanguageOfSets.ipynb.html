@@ -1,7 +1,11 @@
+---
+date: 2019-07-11 11:46:19.080877350 +0530
+---
+
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>FOL</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>LanguageOfSets</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11771,12 +11775,23 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="First-order-langauges-and-Sets">First-order langauges and Sets<a class="anchor-link" href="#First-order-langauges-and-Sets">&#182;</a></h1><h2 id="First-Order-languages">First-Order languages<a class="anchor-link" href="#First-Order-languages">&#182;</a></h2><p>A first-order language is determined by a vocabulary consisting of _variables, <em>constants</em>, <em>functions</em> and <em>relations</em>. First, we encode functions and relations.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-scala"><pre><span></span><span class="k">import</span> <span class="nn">$cp.bin.</span><span class="n">`logic.jar`</span>
+<div class=" highlight hl-scala"><pre><span></span><span class="k">case</span> <span class="k">class</span> <span class="nc">Function</span><span class="o">(</span><span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">degree</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Relation</span><span class="o">(</span><span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">degree</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span>
 </pre></div>
 
 </div>
@@ -11795,7 +11810,8 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">$cp.$              </span></pre>
+<pre>defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">Function</span>
+defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">Relation</span></pre>
 </div>
 
 </div>
@@ -11803,13 +11819,59 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We form two kinds of <em>expressions</em>, <em>terms</em> and <em>formulas</em> using these. Both of these are defined recursively.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-scala"><pre><span></span><span class="k">import</span> <span class="nn">logic._</span>
+<div class=" highlight hl-scala"><pre><span></span><span class="k">sealed</span> <span class="k">trait</span> <span class="nc">Expression</span>
+
+<span class="k">sealed</span> <span class="k">trait</span> <span class="nc">Term</span> <span class="k">extends</span> <span class="nc">Expression</span>
+
+<span class="k">sealed</span> <span class="k">trait</span> <span class="nc">Formula</span> <span class="k">extends</span> <span class="nc">Expression</span>
+
+<span class="k">object</span> <span class="nc">Term</span><span class="o">{</span>
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Var</span><span class="o">(</span><span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Term</span>
+    
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Const</span><span class="o">(</span><span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Term</span> 
+
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Recursive</span><span class="o">(</span><span class="n">function</span><span class="k">:</span> <span class="kt">Function</span><span class="o">,</span> <span class="n">arguments</span><span class="k">:</span> <span class="kt">Vector</span><span class="o">[</span><span class="kt">Term</span><span class="o">])</span> <span class="k">extends</span> <span class="nc">Term</span><span class="o">{</span>
+        <span class="n">require</span><span class="o">(</span><span class="n">function</span><span class="o">.</span><span class="n">degree</span> <span class="o">==</span> <span class="n">arguments</span><span class="o">.</span><span class="n">length</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">object</span> <span class="nc">Formula</span><span class="o">{</span>
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Equality</span><span class="o">(</span><span class="n">lhs</span><span class="k">:</span> <span class="kt">Term</span><span class="o">,</span> <span class="n">rhs</span><span class="k">:</span> <span class="kt">Term</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+    
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Atomic</span><span class="o">(</span><span class="n">relation</span><span class="k">:</span> <span class="kt">Relation</span><span class="o">,</span> <span class="n">arguments</span><span class="k">:</span> <span class="kt">Vector</span><span class="o">[</span><span class="kt">Term</span><span class="o">])</span> <span class="k">extends</span> <span class="nc">Formula</span><span class="o">{</span>
+        <span class="n">require</span><span class="o">(</span><span class="n">relation</span><span class="o">.</span><span class="n">degree</span> <span class="o">==</span> <span class="n">arguments</span><span class="o">.</span><span class="n">length</span><span class="o">)</span>
+    <span class="o">}</span>
+
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Or</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">Q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">And</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">Q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Implies</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">Q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Equivalent</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">Q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Not</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">ForAll</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Term.Var</span><span class="o">,</span> <span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Exists</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Term.Var</span><span class="o">,</span> <span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+
+<span class="o">}</span>
 </pre></div>
 
 </div>
@@ -11828,7 +11890,11 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">logic._</span></pre>
+<pre>defined <span class="ansi-green-fg">trait</span> <span class="ansi-cyan-fg">Expression</span>
+defined <span class="ansi-green-fg">trait</span> <span class="ansi-cyan-fg">Term</span>
+defined <span class="ansi-green-fg">trait</span> <span class="ansi-cyan-fg">Formula</span>
+defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">Term</span>
+defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">Formula</span></pre>
 </div>
 
 </div>
@@ -11836,13 +11902,32 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-language-of-Sets">The language of Sets<a class="anchor-link" href="#The-language-of-Sets">&#182;</a></h2><p>The language of sets has:</p>
+<ul>
+<li>a single constant $\phi$</li>
+<li>a single relation $\in$ of degree $2$.</li>
+</ul>
+<p>We introduce these as well as a convenience method.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">zero</span> <span class="k">=</span> <span class="nc">Term</span><span class="o">.</span><span class="nc">Const</span><span class="o">(</span><span class="s">&quot;0&quot;</span><span class="o">)</span>
+<div class=" highlight hl-scala"><pre><span></span><span class="k">import</span> <span class="nn">Term._</span><span class="o">,</span> <span class="nc">Formula</span><span class="o">.</span><span class="k">_</span>
+
+<span class="k">val</span> <span class="n">phi</span> <span class="k">=</span> <span class="nc">Const</span><span class="o">(</span><span class="s">&quot;empty-set&quot;</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">in</span> <span class="k">=</span> <span class="nc">Relation</span><span class="o">(</span><span class="s">&quot;in&quot;</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
+
+<span class="k">def</span> <span class="n">belongs</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Term</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Term</span><span class="o">)</span> <span class="k">=</span> <span class="nc">Formula</span><span class="o">.</span><span class="nc">Atomic</span><span class="o">(</span><span class="n">in</span><span class="o">,</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">))</span>
 </pre></div>
 
 </div>
@@ -11861,7 +11946,12 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">zero</span>: <span class="ansi-green-fg">Term</span>.<span class="ansi-green-fg">Const</span> = <span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;0&#34;</span>)</pre>
+<pre><span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">Term._, Formula._
+
+</span>
+<span class="ansi-cyan-fg">phi</span>: <span class="ansi-green-fg">Const</span> = <span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;empty-set&#34;</span>)
+<span class="ansi-cyan-fg">in</span>: <span class="ansi-green-fg">Relation</span> = <span class="ansi-yellow-fg">Relation</span>(<span class="ansi-green-fg">&#34;in&#34;</span>, <span class="ansi-green-fg">2</span>)
+defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">belongs</span></pre>
 </div>
 
 </div>
@@ -11870,107 +11960,14 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">succ</span> <span class="k">=</span> <span class="nc">Function</span><span class="o">(</span><span class="s">&quot;succ&quot;</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As an example, we define extensionality.</p>
 
 </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">succ</span>: <span class="ansi-green-fg">Function</span> = <span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">one</span> <span class="k">=</span> <span class="n">succ</span><span class="o">(</span><span class="n">zero</span><span class="o">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">one</span>: <span class="ansi-green-fg">Term</span>.<span class="ansi-green-fg">Recursive</span> = <span class="ansi-yellow-fg">Recursive</span>(<span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;0&#34;</span>)))</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">f</span> <span class="k">=</span> <span class="n">zero</span> <span class="o">=:=</span> <span class="n">one</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[6]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">f</span>: <span class="ansi-green-fg">Formula</span>.<span class="ansi-green-fg">Equality</span> = <span class="ansi-yellow-fg">Equality</span>(
-  <span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;0&#34;</span>),
-  <span class="ansi-yellow-fg">Recursive</span>(<span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;0&#34;</span>)))
-)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
     </div>
   </div>
