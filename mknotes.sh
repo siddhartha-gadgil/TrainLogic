@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm _notebooks/notes/* || true
 for note in notes/*.ipynb
 do
     echo $note   
