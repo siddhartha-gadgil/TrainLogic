@@ -78,9 +78,9 @@ messageStyle: "none",
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     Exercises<span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <!-- <li class="dropdown-header">Assignments</li> -->
-                    <li class="dropdown-header"><strong>(Placeholder only)</strong></li>
-                    {% assign sorted = (site.assignments | sort: 'date') | reverse %}
+                    <!-- <li class="dropdown-header">Assignments</li> -->                    
+                    {% assign sorted = (site.assignments | sort: 'date') | reverse %}{% assign len = sorted | size %}
+                    {% if len == 0 %} <li class="dropdown-header"><strong>(to be posted)</strong></li>{% endif %}
                     {% for ass in sorted  %}
                     <li>
                       <a href="{{ site.baseurl }}{{ ass.url }}.html"> {{ ass.title }}</a>

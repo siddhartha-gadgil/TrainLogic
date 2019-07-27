@@ -99,9 +99,9 @@ This course of lectures is an introduction to logic and type theory as backgroun
 </div>
 
 <div class="col-md-3 section" id ="exercises">
-  <h3> <a href="assign-all.html">Exercises</a> </h3>
-  <p class="lead text-center">(Placeholder only)</p>
-  {% assign sorted = site.assignments | sort: 'date' | reverse %}
+  <h3> <a href="assign-all.html">Exercises</a> </h3>  
+  {% assign sorted = site.assignments | sort: 'date' | reverse %}{% assign len = sorted | size %}
+  {% if len == 0 %}(to be posted){% endif %}
   <ul>
 
     {% for ass in sorted  %}
