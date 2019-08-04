@@ -82,7 +82,7 @@ object Formula{
         case Equivalent(p, q) => freeVariables(p) union freeVariables(q)
         case And(p, q) => freeVariables(p) union freeVariables(q)
         case Not(p) => freeVariables(p) 
-        case Equality(lhs, rhs) =>freeVariables(p) union freeVariables(q)
+        case Equality(lhs, rhs) => variables(lhs) union variables(rhs)
     }
 
 }
