@@ -49,19 +49,19 @@ object Formula{
         require(relation.degree == arguments.length)
     }
 
-    case class Or(P: Formula, Q: Formula) extends Formula
+    case class Or(p: Formula, q: Formula) extends Formula
 
-    case class And(P: Formula, Q: Formula) extends Formula
+    case class And(p: Formula, q: Formula) extends Formula
 
-    case class Implies(P: Formula, Q: Formula) extends Formula
+    case class Implies(p: Formula, q: Formula) extends Formula
 
-    case class Equivalent(P: Formula, Q: Formula) extends Formula
+    case class Equivalent(p: Formula, q: Formula) extends Formula
 
-    case class Not(P: Formula) extends Formula
+    case class Not(p: Formula) extends Formula
 
-    case class ForAll(x: Term.Var, P: Formula) extends Formula
+    case class ForAll(x: Term.Var, p: Formula) extends Formula
 
-    case class Exists(x: Term.Var, P: Formula) extends Formula
+    case class Exists(x: Term.Var, p: Formula) extends Formula
 
     def freeVariables(fmla: Formula) : Set[Var] = fmla match {
         case Atomic(relation, arguments) => arguments.flatMap(term.variables).reduce(_ union _)
