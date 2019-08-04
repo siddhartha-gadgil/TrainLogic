@@ -37,7 +37,11 @@ object Term{
 
     def variables(t: Term) : Set[Var] = t match {
         case Const(name) => Set()
-        case Recursive(function, arguments) => arguments.map(variables).reduce(_ union _)
+        case Recursive(function, arguments) => 
+            for {
+                t : Term <- arguments.toSet
+                x <- variables(t)
+            } yield x
         case Var(name) => Set(Var(name))
     }
 }
@@ -63,8 +67,14 @@ object Formula{
 
     case class Exists(x: Term.Var, p: Formula) extends Formula
 
+    import Term._
+
     def freeVariables(fmla: Formula) : Set[Var] = fmla match {
-        case Atomic(relation, arguments) => arguments.flatMap(term.variables).reduce(_ union _)
+        case Atomic(relation, arguments) => 
+            for {
+                t : Term <- arguments.toSet
+                x <- variables(t)
+            } yield x
         case Implies(p, q) => freeVariables(p) union freeVariables(q)
         case ForAll(x, p) => freeVariables(p) - x
         case Exists(x, p) => freeVariables(p) - x
