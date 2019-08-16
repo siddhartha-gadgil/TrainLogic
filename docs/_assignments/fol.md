@@ -3,7 +3,7 @@ title: Formulas for Sets
 date: 2019-8-20
 ---
 
-Write a function/program in any programming language to list all the _closed formulas_ in the _language of sets_. Recall that this is the _first-order language_ with a single constant $\phi$ and a relation $\in$ of degree $2$ (plus the equality relation).
+Write a function/program in any programming language to list all the _closed formulas_ in the _language of sets_. Recall that this is the _first-order language_ with a single constant $\phi$ and a relation $\in$ of degree $2$ (plus the equality relation). A _closed formula_ means a formula with no free variables.
 
 The solution can be either a function that we can import and interact with in a REPL/console/notebook or a program to which we give appropriate input (as below) and get output as desired. Concretely:
 
