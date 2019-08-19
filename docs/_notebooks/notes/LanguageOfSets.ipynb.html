@@ -1,5 +1,5 @@
 ---
-date: 2019-07-11 15:50:24.548770562 +0530
+date: 2019-07-18 09:32:44.827997333 +0530
 ---
 
 <!DOCTYPE html>
@@ -13093,7 +13093,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13120,7 +13120,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="First-order-languages-and-Set-Theory">First-order languages and Set Theory<a class="anchor-link" href="#First-order-languages-and-Set-Theory">&#182;</a></h1><h2 id="First-Order-languages">First-Order languages<a class="anchor-link" href="#First-Order-languages">&#182;</a></h2><p>A first-order language is determined by a vocabulary consisting of _variables, <em>constants</em>, <em>functions</em> and <em>relations</em>. First, we encode functions and relations.</p>
+<h1 id="First-order-languages-and-Set-Theory">First-order languages and Set Theory<a class="anchor-link" href="#First-order-languages-and-Set-Theory">&#182;</a></h1><h2 id="First-Order-languages">First-Order languages<a class="anchor-link" href="#First-Order-languages">&#182;</a></h2><p>A first-order language is determined by a vocabulary consisting of <em>variables</em>, <em>constants</em>, <em>functions</em> and <em>relations</em>. First, we encode functions and relations.</p>
 
 </div>
 </div>
@@ -13197,19 +13197,19 @@ defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">Rela
         <span class="n">require</span><span class="o">(</span><span class="n">relation</span><span class="o">.</span><span class="n">degree</span> <span class="o">==</span> <span class="n">arguments</span><span class="o">.</span><span class="n">length</span><span class="o">)</span>
     <span class="o">}</span>
 
-    <span class="k">case</span> <span class="k">class</span> <span class="nc">Or</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">Q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Or</span><span class="o">(</span><span class="n">p</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
 
-    <span class="k">case</span> <span class="k">class</span> <span class="nc">And</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">Q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">And</span><span class="o">(</span><span class="n">p</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
 
-    <span class="k">case</span> <span class="k">class</span> <span class="nc">Implies</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">Q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Implies</span><span class="o">(</span><span class="n">p</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
 
-    <span class="k">case</span> <span class="k">class</span> <span class="nc">Equivalent</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">Q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Equivalent</span><span class="o">(</span><span class="n">p</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">,</span> <span class="n">q</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
 
-    <span class="k">case</span> <span class="k">class</span> <span class="nc">Not</span><span class="o">(</span><span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Not</span><span class="o">(</span><span class="n">p</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
 
-    <span class="k">case</span> <span class="k">class</span> <span class="nc">ForAll</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Term.Var</span><span class="o">,</span> <span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">ForAll</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Term.Var</span><span class="o">,</span> <span class="n">p</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
 
-    <span class="k">case</span> <span class="k">class</span> <span class="nc">Exists</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Term.Var</span><span class="o">,</span> <span class="n">P</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
+    <span class="k">case</span> <span class="k">class</span> <span class="nc">Exists</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Term.Var</span><span class="o">,</span> <span class="n">p</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Formula</span>
 
 <span class="o">}</span>
 </pre></div>
@@ -13243,6 +13243,170 @@ defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">For
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">sum</span> <span class="k">=</span> <span class="nc">Function</span><span class="o">(</span><span class="s">&quot;+&quot;</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">succ</span> <span class="k">=</span> <span class="nc">Function</span><span class="o">(</span><span class="s">&quot;succ&quot;</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
+<span class="c1">// Some valid terms</span>
+<span class="k">import</span> <span class="nn">Term._</span>
+<span class="k">val</span> <span class="n">n</span> <span class="k">=</span> <span class="nc">Var</span><span class="o">(</span><span class="s">&quot;n&quot;</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">m</span> <span class="k">=</span> <span class="nc">Var</span><span class="o">(</span><span class="s">&quot;m&quot;</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">one</span> <span class="k">=</span> <span class="nc">Const</span><span class="o">(</span><span class="s">&quot;1&quot;</span><span class="o">)</span>
+<span class="nc">Recursive</span><span class="o">(</span><span class="n">sum</span><span class="o">,</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">m</span><span class="o">))</span>
+<span class="nc">Recursive</span><span class="o">(</span><span class="n">succ</span><span class="o">,</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">n</span><span class="o">))</span>
+<span class="k">val</span> <span class="n">two</span> <span class="k">=</span> <span class="nc">Recursive</span><span class="o">(</span><span class="n">succ</span><span class="o">,</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">one</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">sum</span>: <span class="ansi-green-fg">Function</span> = <span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;+&#34;</span>, <span class="ansi-green-fg">2</span>)
+<span class="ansi-cyan-fg">succ</span>: <span class="ansi-green-fg">Function</span> = <span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>)
+<span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">Term._
+</span>
+<span class="ansi-cyan-fg">n</span>: <span class="ansi-green-fg">Var</span> = <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>)
+<span class="ansi-cyan-fg">m</span>: <span class="ansi-green-fg">Var</span> = <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;m&#34;</span>)
+<span class="ansi-cyan-fg">one</span>: <span class="ansi-green-fg">Const</span> = <span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>)
+<span class="ansi-cyan-fg">res2_6</span>: <span class="ansi-green-fg">Recursive</span> = <span class="ansi-yellow-fg">Recursive</span>(<span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;+&#34;</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;m&#34;</span>)))
+<span class="ansi-cyan-fg">res2_7</span>: <span class="ansi-green-fg">Recursive</span> = <span class="ansi-yellow-fg">Recursive</span>(<span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>)))
+<span class="ansi-cyan-fg">two</span>: <span class="ansi-green-fg">Recursive</span> = <span class="ansi-yellow-fg">Recursive</span>(<span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>)))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="c1">// An invalid term</span>
+<span class="k">import</span> <span class="nn">scala.util.Try</span>
+<span class="k">val</span> <span class="n">wrong</span> <span class="k">=</span> <span class="nc">Try</span><span class="o">(</span><span class="nc">Recursive</span><span class="o">(</span><span class="n">succ</span><span class="o">,</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">one</span><span class="o">,</span> <span class="n">n</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">scala.util.Try
+</span>
+<span class="ansi-cyan-fg">wrong</span>: <span class="ansi-green-fg">Try</span>[<span class="ansi-green-fg">Recursive</span>] = <span class="ansi-yellow-fg">Failure</span>(
+  java.lang.IllegalArgumentException: requirement failed
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="c1">// Some formulas</span>
+<span class="k">import</span> <span class="nn">Formula._</span>
+<span class="k">val</span> <span class="n">f1</span> <span class="k">=</span> <span class="nc">Equality</span><span class="o">(</span><span class="n">one</span><span class="o">,</span> <span class="n">two</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">f2</span> <span class="k">=</span> <span class="nc">Equality</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">one</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">leq</span> <span class="k">=</span> <span class="nc">Relation</span><span class="o">(</span><span class="s">&quot;&lt;=&quot;</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">f3</span> <span class="k">=</span> <span class="nc">Atomic</span><span class="o">(</span><span class="n">leq</span><span class="o">,</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">one</span><span class="o">,</span> <span class="n">two</span><span class="o">))</span>
+<span class="k">val</span> <span class="n">f4</span> <span class="k">=</span> <span class="nc">ForAll</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">f2</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">f5</span> <span class="k">=</span> <span class="nc">Exists</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">f2</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">f6</span> <span class="k">=</span> <span class="nc">ForAll</span><span class="o">(</span><span class="n">m</span><span class="o">,</span> <span class="n">f1</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">Formula._
+</span>
+<span class="ansi-cyan-fg">f1</span>: <span class="ansi-green-fg">Equality</span> = <span class="ansi-yellow-fg">Equality</span>(
+  <span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>),
+  <span class="ansi-yellow-fg">Recursive</span>(<span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>)))
+)
+<span class="ansi-cyan-fg">f2</span>: <span class="ansi-green-fg">Equality</span> = <span class="ansi-yellow-fg">Equality</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>), <span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>))
+<span class="ansi-cyan-fg">leq</span>: <span class="ansi-green-fg">Relation</span> = <span class="ansi-yellow-fg">Relation</span>(<span class="ansi-green-fg">&#34;&lt;=&#34;</span>, <span class="ansi-green-fg">2</span>)
+<span class="ansi-cyan-fg">f3</span>: <span class="ansi-green-fg">Atomic</span> = <span class="ansi-yellow-fg">Atomic</span>(
+  <span class="ansi-yellow-fg">Relation</span>(<span class="ansi-green-fg">&#34;&lt;=&#34;</span>, <span class="ansi-green-fg">2</span>),
+  <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>), <span class="ansi-yellow-fg">Recursive</span>(<span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>))))
+)
+<span class="ansi-cyan-fg">f4</span>: <span class="ansi-green-fg">ForAll</span> = <span class="ansi-yellow-fg">ForAll</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>), <span class="ansi-yellow-fg">Equality</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>), <span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>)))
+<span class="ansi-cyan-fg">f5</span>: <span class="ansi-green-fg">Exists</span> = <span class="ansi-yellow-fg">Exists</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>), <span class="ansi-yellow-fg">Equality</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>), <span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>)))
+<span class="ansi-cyan-fg">f6</span>: <span class="ansi-green-fg">ForAll</span> = <span class="ansi-yellow-fg">ForAll</span>(
+  <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;m&#34;</span>),
+  <span class="ansi-yellow-fg">Equality</span>(<span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>), <span class="ansi-yellow-fg">Recursive</span>(<span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Const</span>(<span class="ansi-green-fg">&#34;1&#34;</span>))))
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The formulas in mathematical notation are</p>
+<ul>
+<li>$1 = 2$</li>
+<li>$n = 1$</li>
+<li>$1 \leq 2$</li>
+<li>$\forall n\ n = 1$</li>
+<li>$\exists n\ n = 1$</li>
+<li>$\exists m\ 1 = 2$</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13258,7 +13422,7 @@ defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">For
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">import</span> <span class="nn">Term._</span><span class="o">,</span> <span class="nc">Formula</span><span class="o">.</span><span class="k">_</span>
@@ -13279,7 +13443,7 @@ defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">For
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13302,10 +13466,2033 @@ defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">b
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As an example, we define extensionality.</p>
+<p>As an example, we define extensionality, i.e. if two sets have the same members, they are equal.
+$$\forall x\forall y((\forall a\ (a\in x\iff a \in y)) \implies (x = y))$$</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">a</span> <span class="k">=</span> <span class="nc">Var</span><span class="o">(</span><span class="s">&quot;a&quot;</span><span class="o">)</span>
+<span class="k">def</span> <span class="n">sameMembers</span><span class="o">(</span><span class="n">p</span><span class="k">:</span> <span class="kt">Term</span><span class="o">,</span> <span class="n">q</span><span class="k">:</span> <span class="kt">Term</span><span class="o">)</span><span class="k">:</span> <span class="kt">Formula</span> <span class="o">=</span> 
+    <span class="nc">ForAll</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="nc">Equivalent</span><span class="o">(</span><span class="n">belongs</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">p</span><span class="o">),</span> <span class="n">belongs</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">q</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">a</span>: <span class="ansi-green-fg">Var</span> = <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;a&#34;</span>)
+defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">sameMembers</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="nc">Var</span><span class="o">(</span><span class="s">&quot;x&quot;</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="nc">Var</span><span class="o">(</span><span class="s">&quot;y&quot;</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">extensionality</span> <span class="k">=</span> 
+   <span class="nc">ForAll</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> 
+         <span class="nc">ForAll</span><span class="o">(</span><span class="n">y</span><span class="o">,</span>
+               <span class="nc">Implies</span><span class="o">(</span><span class="n">sameMembers</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">),</span> <span class="nc">Equality</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">))))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">x</span>: <span class="ansi-green-fg">Var</span> = <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>)
+<span class="ansi-cyan-fg">y</span>: <span class="ansi-green-fg">Var</span> = <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>)
+<span class="ansi-cyan-fg">extensionality</span>: <span class="ansi-green-fg">ForAll</span> = <span class="ansi-yellow-fg">ForAll</span>(
+  <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>),
+  <span class="ansi-yellow-fg">ForAll</span>(
+    <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>),
+    <span class="ansi-yellow-fg">Implies</span>(
+      <span class="ansi-yellow-fg">ForAll</span>(
+        <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;a&#34;</span>),
+        <span class="ansi-yellow-fg">Equivalent</span>(
+          <span class="ansi-yellow-fg">Atomic</span>(<span class="ansi-yellow-fg">Relation</span>(<span class="ansi-green-fg">&#34;in&#34;</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;a&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>))),
+          <span class="ansi-yellow-fg">Atomic</span>(<span class="ansi-yellow-fg">Relation</span>(<span class="ansi-green-fg">&#34;in&#34;</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;a&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>)))
+        )
+      ),
+      <span class="ansi-yellow-fg">Equality</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>))
+    )
+  )
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Variables-and-free-variables">Variables and free variables<a class="anchor-link" href="#Variables-and-free-variables">&#182;</a></h2><ul>
+<li>The <em>value</em> of a term can depend on some variables.</li>
+<li>The <em>truth value</em> of a formula can depend on some variables.</li>
+<li>These are called <em>free variables</em>.</li>
+</ul>
+<h3 id="Examples">Examples<a class="anchor-link" href="#Examples">&#182;</a></h3><p>In the language of natural numbers</p>
+<ul>
+<li>$1 = 2$; no free variables</li>
+<li>$n = 1$; free variable n</li>
+<li>$1 \leq 2$; no free variables</li>
+<li>$\forall n\ n = 1$; no free variables</li>
+<li>$\exists n\ n +5 &lt; m$; free variable m</li>
+<li>$\exists m\ 1 = 2$; no free variables</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="c1">// Variable in a term</span>
+<span class="k">def</span> <span class="n">variables</span><span class="o">(</span><span class="n">t</span><span class="k">:</span> <span class="kt">Term</span><span class="o">)</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">Var</span><span class="o">]</span> <span class="k">=</span> <span class="n">t</span> <span class="k">match</span> <span class="o">{</span>
+        <span class="k">case</span> <span class="nc">Const</span><span class="o">(</span><span class="n">name</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Set</span><span class="o">()</span>
+        <span class="k">case</span> <span class="nc">Recursive</span><span class="o">(</span><span class="n">function</span><span class="o">,</span> <span class="n">arguments</span><span class="o">)</span> <span class="k">=&gt;</span>
+            <span class="k">for</span><span class="o">{</span>
+                <span class="n">arg</span> <span class="k">:</span> <span class="kt">Term</span> <span class="kt">&lt;-</span> <span class="kt">arguments.toSet</span>
+                <span class="n">x</span> <span class="k">&lt;-</span> <span class="n">variables</span><span class="o">(</span><span class="n">arg</span><span class="o">)</span>
+            <span class="o">}</span> <span class="k">yield</span> <span class="n">x</span>
+        <span class="k">case</span> <span class="nc">Var</span><span class="o">(</span><span class="n">name</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="nc">Var</span><span class="o">(</span><span class="n">name</span><span class="o">))</span>
+    <span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">variables</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">variables</span><span class="o">(</span><span class="nc">Recursive</span><span class="o">(</span><span class="n">sum</span><span class="o">,</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">m</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res9</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Var</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;m&#34;</span>))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">p</span> <span class="k">=</span> <span class="nc">Recursive</span><span class="o">(</span><span class="n">succ</span><span class="o">,</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">m</span><span class="o">))</span>
+<span class="n">variables</span><span class="o">(</span><span class="nc">Recursive</span><span class="o">(</span><span class="n">sum</span><span class="o">,</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">p</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">p</span>: <span class="ansi-green-fg">Recursive</span> = <span class="ansi-yellow-fg">Recursive</span>(<span class="ansi-yellow-fg">Function</span>(<span class="ansi-green-fg">&#34;succ&#34;</span>, <span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;m&#34;</span>)))
+<span class="ansi-cyan-fg">res10_1</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Var</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;n&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;m&#34;</span>))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">variables</span><span class="o">(</span><span class="n">p</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res11</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Var</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;m&#34;</span>))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">freeVariables</span><span class="o">(</span><span class="n">fmla</span><span class="k">:</span> <span class="kt">Formula</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">Var</span><span class="o">]</span> <span class="k">=</span> <span class="n">fmla</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nc">Equality</span><span class="o">(</span><span class="n">lhs</span><span class="o">,</span> <span class="n">rhs</span><span class="o">)</span> <span class="k">=&gt;</span> 
+        <span class="n">variables</span><span class="o">(</span><span class="n">lhs</span><span class="o">)</span> <span class="n">union</span> <span class="n">variables</span><span class="o">(</span><span class="n">rhs</span><span class="o">)</span>
+    <span class="k">case</span> <span class="nc">And</span><span class="o">(</span><span class="n">p</span><span class="o">,</span> <span class="n">q</span><span class="o">)</span> <span class="k">=&gt;</span> 
+        <span class="n">freeVariables</span><span class="o">(</span><span class="n">p</span><span class="o">)</span> <span class="n">union</span> <span class="n">freeVariables</span><span class="o">(</span><span class="n">q</span><span class="o">)</span>
+    <span class="k">case</span> <span class="nc">Implies</span><span class="o">(</span><span class="n">p</span><span class="o">,</span> <span class="n">q</span><span class="o">)</span> <span class="k">=&gt;</span> 
+        <span class="n">freeVariables</span><span class="o">(</span><span class="n">p</span><span class="o">)</span> <span class="n">union</span> <span class="n">freeVariables</span><span class="o">(</span><span class="n">q</span><span class="o">)</span>
+    <span class="k">case</span> <span class="nc">Equivalent</span><span class="o">(</span><span class="n">p</span><span class="o">,</span> <span class="n">q</span><span class="o">)</span> <span class="k">=&gt;</span> 
+        <span class="n">freeVariables</span><span class="o">(</span><span class="n">p</span><span class="o">)</span> <span class="n">union</span> <span class="n">freeVariables</span><span class="o">(</span><span class="n">q</span><span class="o">)</span>
+    <span class="k">case</span> <span class="nc">Not</span><span class="o">(</span><span class="n">p</span><span class="o">)</span> <span class="k">=&gt;</span> 
+        <span class="n">freeVariables</span><span class="o">(</span><span class="n">p</span><span class="o">)</span>
+    <span class="k">case</span> <span class="nc">ForAll</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">p</span><span class="o">)</span> <span class="k">=&gt;</span> 
+        <span class="n">freeVariables</span><span class="o">(</span><span class="n">p</span><span class="o">)</span> <span class="o">-</span> <span class="n">x</span>
+    <span class="k">case</span> <span class="nc">Atomic</span><span class="o">(</span><span class="n">relation</span><span class="o">,</span> <span class="n">arguments</span><span class="o">)</span> <span class="k">=&gt;</span>
+        <span class="k">for</span> <span class="o">{</span>
+            <span class="n">arg</span><span class="k">:</span> <span class="kt">Term</span> <span class="kt">&lt;-</span> <span class="kt">arguments.toSet</span>
+            <span class="n">x</span> <span class="k">&lt;-</span> <span class="n">variables</span><span class="o">(</span><span class="n">arg</span><span class="o">)</span>
+        <span class="o">}</span> <span class="k">yield</span> <span class="n">x</span>
+    <span class="k">case</span> <span class="nc">Exists</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">p</span><span class="o">)</span> <span class="k">=&gt;</span> 
+        <span class="n">freeVariables</span><span class="o">(</span><span class="n">p</span><span class="o">)</span> <span class="o">-</span> <span class="n">x</span> 
+    <span class="k">case</span> <span class="nc">Or</span><span class="o">(</span><span class="n">p</span><span class="o">,</span> <span class="n">q</span><span class="o">)</span> <span class="k">=&gt;</span> 
+        <span class="n">freeVariables</span><span class="o">(</span><span class="n">p</span><span class="o">)</span> <span class="n">union</span> <span class="n">freeVariables</span><span class="o">(</span><span class="n">q</span><span class="o">)</span>
+    <span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">freeVariables</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">fmla1</span> <span class="k">=</span> <span class="nc">Exists</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">belongs</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">))</span>
+<span class="k">val</span> <span class="n">fmla2</span> <span class="k">=</span> <span class="nc">ForAll</span><span class="o">(</span><span class="n">y</span><span class="o">,</span> <span class="n">fmla1</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">fmla3</span> <span class="k">=</span> <span class="n">belongs</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">fmla1</span>: <span class="ansi-green-fg">Exists</span> = <span class="ansi-yellow-fg">Exists</span>(
+  <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>),
+  <span class="ansi-yellow-fg">Atomic</span>(<span class="ansi-yellow-fg">Relation</span>(<span class="ansi-green-fg">&#34;in&#34;</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>)))
+)
+<span class="ansi-cyan-fg">fmla2</span>: <span class="ansi-green-fg">ForAll</span> = <span class="ansi-yellow-fg">ForAll</span>(
+  <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>),
+  <span class="ansi-yellow-fg">Exists</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>), <span class="ansi-yellow-fg">Atomic</span>(<span class="ansi-yellow-fg">Relation</span>(<span class="ansi-green-fg">&#34;in&#34;</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>))))
+)
+<span class="ansi-cyan-fg">fmla3</span>: <span class="ansi-green-fg">Atomic</span> = <span class="ansi-yellow-fg">Atomic</span>(<span class="ansi-yellow-fg">Relation</span>(<span class="ansi-green-fg">&#34;in&#34;</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>)))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">freeVariables</span><span class="o">(</span><span class="n">fmla1</span><span class="o">)</span>
+<span class="n">freeVariables</span><span class="o">(</span><span class="n">fmla2</span><span class="o">)</span>
+<span class="n">freeVariables</span><span class="o">(</span><span class="n">fmla3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res14_0</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Var</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>))
+<span class="ansi-cyan-fg">res14_1</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Var</span>] = <span class="ansi-yellow-fg">Set</span>()
+<span class="ansi-cyan-fg">res14_2</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Var</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;y&#34;</span>))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Set-Theory">Set Theory<a class="anchor-link" href="#Set-Theory">&#182;</a></h2><p>We have so far:</p>
+<ul>
+<li>the empty set $\phi$.</li>
+<li>the relation $\in$ for sets.</li>
+<li>an axiom saying when two sets are equal.</li>
+</ul>
+<p>We also know that we cannot specify sets by arbitrary properties, i.e., like
+$$\{p : \text{$p$ is a prime}\}$$.</p>
+<p>We shall, however, see that we can define sets such as 
+$$\{p \in\mathbb{N} : \text{$p$ is a prime}\}$$
+provided we have previously defined (constructed) $\mathbb{N}$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Properties">Properties<a class="anchor-link" href="#Properties">&#182;</a></h3><p>Let $x$ be a variable. A <em>property of $x$</em> is a <em>formula</em> $p = p(x)$ so that $p$ has no free variables other than $x$ ($x$ may also not be a free variable).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We cannot define sets with <em>unrestricted comprehension</em>, i.e., of the form
+$$S = \{x : p(x) \}$$
+as we get a paradox with the set
+$$ S = \{x : x \notin x\}$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">russell</span> <span class="k">=</span> <span class="nc">Not</span><span class="o">(</span><span class="n">belongs</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">x</span><span class="o">))</span>
+<span class="n">freeVariables</span><span class="o">(</span><span class="n">russell</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">russell</span>: <span class="ansi-green-fg">Not</span> = <span class="ansi-yellow-fg">Not</span>(<span class="ansi-yellow-fg">Atomic</span>(<span class="ansi-yellow-fg">Relation</span>(<span class="ansi-green-fg">&#34;in&#34;</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>), <span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>))))
+<span class="ansi-cyan-fg">res15_1</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Var</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Var</span>(<span class="ansi-green-fg">&#34;x&#34;</span>))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Axiom-schema-of-specification">Axiom schema of specification<a class="anchor-link" href="#Axiom-schema-of-specification">&#182;</a></h3><p>Given a set $U$ and a property $p= p(x)$ of the variable $x$, there exists a set $S$ given by
+$$S = \{x \in U: p(x)\}$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>More formally, fix a formula $p$ with no free variables other than $x$. We have the axiom:
+$$\forall U\exists S(x\in S \iff (x \in U \land p(x))$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="c1">// we can implement specification for nice properties</span>
+<span class="k">val</span> <span class="n">U</span> <span class="k">=</span> <span class="o">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">20</span><span class="o">).</span><span class="n">toSet</span>
+<span class="k">val</span> <span class="n">S</span> <span class="k">=</span> <span class="n">U</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="c1">// p(x) = x % 3 == 0 </span>
+<span class="n">show</span><span class="o">(</span><span class="n">S</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">12</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">18</span>, <span class="ansi-green-fg">15</span>)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">U</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(
+  <span class="ansi-green-fg">5</span>,
+  <span class="ansi-green-fg">10</span>,
+  <span class="ansi-green-fg">14</span>,
+  <span class="ansi-green-fg">20</span>,
+  <span class="ansi-green-fg">1</span>,
+  <span class="ansi-green-fg">6</span>,
+  <span class="ansi-green-fg">9</span>,
+  <span class="ansi-green-fg">13</span>,
+  <span class="ansi-green-fg">2</span>,
+  <span class="ansi-green-fg">17</span>,
+  <span class="ansi-green-fg">12</span>,
+  <span class="ansi-green-fg">7</span>,
+  <span class="ansi-green-fg">3</span>,
+  <span class="ansi-green-fg">18</span>,
+  <span class="ansi-green-fg">16</span>,
+  <span class="ansi-green-fg">11</span>,
+  <span class="ansi-green-fg">8</span>,
+  <span class="ansi-green-fg">19</span>,
+  <span class="ansi-green-fg">4</span>,
+  <span class="ansi-green-fg">15</span>
+)
+<span class="ansi-cyan-fg">S</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">12</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">18</span>, <span class="ansi-green-fg">15</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Union-of-a-pair-of-sets">Union of a pair of sets<a class="anchor-link" href="#Union-of-a-pair-of-sets">&#182;</a></h2><p>$A \cup B$ is the set whose elements are elements of $A$ and elements of $B$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">)</span> <span class="n">union</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">9</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res17</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The existence of union is given by the <em>axiom of unordered pairs</em></p>
+$$\forall A \forall B\exists C(\forall x\ (x\in C \iff (x\in A \lor x\in B )))$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Arbitrary-union">Arbitrary union<a class="anchor-link" href="#Arbitrary-union">&#182;</a></h3><p>Given a <em>set of sets</em> $U$, we can take the union of all of these, i.e. there exists
+$$\bigcup_{A \in U}A$$
+such that $x \in \bigcup_{A \in U}A$ if and only if 
+$$\exists A\ (A \in U \land x \in A)$$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="c1">// union of sets</span>
+<span class="k">val</span> <span class="n">setOfSets</span> <span class="k">=</span> <span class="nc">Set</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">23</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">7</span><span class="o">))</span>
+<span class="k">val</span> <span class="n">bigUnion</span> <span class="k">=</span> <span class="n">setOfSets</span><span class="o">.</span><span class="n">flatten</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">setOfSets</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>]] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">23</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">7</span>))
+<span class="ansi-cyan-fg">bigUnion</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">23</span>, <span class="ansi-green-fg">8</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There is an axiom that says $\bigcup_{A \in U}A$ exists (<em>axiom of unions</em>)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">big</span> <span class="k">=</span> <span class="nc">Set</span><span class="o">[</span><span class="kt">Any</span><span class="o">](</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">23</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">7</span><span class="o">))</span>
+<span class="n">big</span> <span class="n">contains</span> <span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">))</span>
+<span class="o">(</span><span class="nc">Set</span><span class="o">[</span><span class="kt">Any</span><span class="o">](</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">)).</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">big</span><span class="o">)</span>
+<span class="n">big</span> <span class="n">contains</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[20]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">big</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Any</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">23</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">7</span>))
+<span class="ansi-cyan-fg">res19_1</span>: <span class="ansi-green-fg">Boolean</span> = true
+<span class="ansi-cyan-fg">res19_2</span>: <span class="ansi-green-fg">Boolean</span> = false
+<span class="ansi-cyan-fg">res19_3</span>: <span class="ansi-green-fg">Boolean</span> = false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Set</span><span class="o">[</span><span class="kt">Any</span><span class="o">](</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">)).</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">big</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res20</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">anotherBig</span> <span class="k">=</span> <span class="nc">Set</span><span class="o">[</span><span class="kt">Any</span><span class="o">](</span><span class="mi">1</span><span class="o">,</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="nc">Set</span><span class="o">[</span><span class="kt">Any</span><span class="o">](</span><span class="mi">2</span><span class="o">,</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">anotherBig</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Any</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>)))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">anotherBig</span> <span class="n">contains</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res22</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Set</span><span class="o">[</span><span class="kt">Any</span><span class="o">](</span><span class="mi">1</span><span class="o">)</span> <span class="n">subsetOf</span> <span class="n">anotherBig</span>
+<span class="n">anotherBig</span> <span class="n">contains</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res23_0</span>: <span class="ansi-green-fg">Boolean</span> = true
+<span class="ansi-cyan-fg">res23_1</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">import</span> <span class="nn">scala.collection.mutable.</span><span class="o">{</span><span class="nc">Set</span> <span class="k">=&gt;</span> <span class="n">mSet</span><span class="o">}</span>
+<span class="k">val</span> <span class="n">ss</span> <span class="k">=</span> <span class="n">mSet</span><span class="o">[</span><span class="kt">Any</span><span class="o">](</span><span class="n">mSet</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="n">mSet</span><span class="o">(</span><span class="mi">2</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-green-fg">import </span><span class="ansi-cyan-fg">scala.collection.mutable.{Set =&gt; mSet}
+</span>
+<span class="ansi-cyan-fg">ss</span>: <span class="ansi-green-fg">collection</span>.<span class="ansi-green-fg">mutable</span>.<span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Any</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">ss</span> <span class="o">+=</span> <span class="n">mSet</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res25</span>: <span class="ansi-green-fg">collection</span>.<span class="ansi-green-fg">mutable</span>.<span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Any</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">ss</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res26</span>: <span class="ansi-green-fg">collection</span>.<span class="ansi-green-fg">mutable</span>.<span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Any</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>), <span class="ansi-green-fg">1</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Intersections">Intersections<a class="anchor-link" href="#Intersections">&#182;</a></h2><p>These do not need a new axiom:</p>
+$$A \cap B = \{x \in A : x \in B\}$$<p>i.e., we are using the property $p = p(x) = x \in B$ with free variable $x$.</p>
+<p><strong>Remark:</strong> By <em>axiom of extenstion</em> $A \cap B = B \cap A$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">A</span> <span class="k">=</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">)</span> 
+<span class="k">val</span> <span class="n">B</span> <span class="k">=</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">9</span><span class="o">)</span>
+<span class="n">A</span> <span class="n">intersect</span> <span class="n">B</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">A</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>)
+<span class="ansi-cyan-fg">B</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">9</span>)
+<span class="ansi-cyan-fg">res27_2</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">A</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">B</span> <span class="n">contains</span> <span class="n">x</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res28</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Power-Set">Power Set<a class="anchor-link" href="#Power-Set">&#182;</a></h3><p>The <em>power set</em> of a set $S$ is the set of subsets of $S$,
+i.e. 
+$$2^S = \{x : x \subset S\}$$</p>
+<p>This exists because of the <em>axiom of power sets</em> (which just says it exists).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">7</span><span class="o">).</span><span class="n">subsets</span><span class="o">.</span><span class="n">toSet</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res29</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>]] = <span class="ansi-yellow-fg">Set</span>(
+  <span class="ansi-yellow-fg">Set</span>(),
+  <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>),
+  <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>),
+  <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">7</span>),
+  <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">7</span>),
+  <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">7</span>),
+  <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">7</span>),
+  <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>)
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Set</span><span class="o">().</span><span class="n">subsets</span><span class="o">.</span><span class="n">toSet</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res30</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Nothing</span>]] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>())</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Set</span><span class="o">().</span><span class="n">subsets</span><span class="o">.</span><span class="n">toSet</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res31</span>: <span class="ansi-green-fg">Int</span> = <span class="ansi-green-fg">1</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Formally, we define $A \subset B$ by
+$x\in A \implies x \in B$.</p>
+<p>The axiom giving existence of power sets says
+$$\forall S\exists P (x\in P \iff x\subset S)$$</p>
+<p>or in full form
+$$\forall S\exists P (x\in P \iff (\forall y\ y\in x\iff y\in S))$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Numbers-as-Sets">Numbers as Sets<a class="anchor-link" href="#Numbers-as-Sets">&#182;</a></h2><p>Everything in mathematics can be represented as sets. 
+As an example, we consider natural numbers. We associate to each number
+$n$ a set of <em>size</em> n.</p>
+<ul>
+<li>$0$ is $\phi$.</li>
+<li>$1$ is $\{\phi\}$.</li>
+<li>$2$ is $\{\phi, \{\phi\}\}$.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In general, we define the <em>successor</em> of a set $s$ as
+$$succ(s) = s \cup \{s\}$$
+and define the set associated to $n$ by</p>
+<ul>
+<li>associate $\varphi$ to $0$.</li>
+<li>if $s$ is associated to $n$, associate $succ(s)$ to $n + 1$.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Remark:</strong> $\{s\} = \{y \in 2^s: y = s \}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">succ</span><span class="o">(</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">Any</span><span class="o">])</span> <span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">Any</span><span class="o">]</span> <span class="k">=</span> <span class="n">s</span> <span class="n">union</span> <span class="nc">Set</span><span class="o">(</span><span class="n">s</span><span class="o">)</span>
+<span class="n">succ</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">succ</span>
+<span class="ansi-cyan-fg">res32_1</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Any</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">numberSet</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">Any</span><span class="o">]</span> <span class="k">=</span>
+     <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="nc">Set</span><span class="o">()</span> <span class="k">else</span> <span class="n">succ</span><span class="o">(</span><span class="n">numberSet</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="o">))</span>
+<span class="n">numberSet</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">numberSet</span>
+<span class="ansi-cyan-fg">res33_1</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Any</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>(), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>()), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>(), <span class="ansi-yellow-fg">Set</span>(<span class="ansi-yellow-fg">Set</span>())))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="o">(</span><span class="mi">0</span> <span class="n">to</span> <span class="mi">10</span><span class="o">).</span><span class="n">map</span> <span class="o">(</span><span class="n">n</span> <span class="k">=&gt;</span> <span class="n">numberSet</span><span class="o">(</span><span class="n">n</span><span class="o">).</span><span class="n">size</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res34</span>: <span class="ansi-green-fg">collection</span>.<span class="ansi-green-fg">immutable</span>.<span class="ansi-green-fg">IndexedSeq</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Vector</span>(
+  <span class="ansi-green-fg">0</span>,
+  <span class="ansi-green-fg">1</span>,
+  <span class="ansi-green-fg">2</span>,
+  <span class="ansi-green-fg">3</span>,
+  <span class="ansi-green-fg">4</span>,
+  <span class="ansi-green-fg">5</span>,
+  <span class="ansi-green-fg">6</span>,
+  <span class="ansi-green-fg">7</span>,
+  <span class="ansi-green-fg">8</span>,
+  <span class="ansi-green-fg">9</span>,
+  <span class="ansi-green-fg">10</span>
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>Talking of <em>size</em> is circular. Instead Cantor defined when two sets have the <em>same size</em>. Formally, we say <em>same cardinality</em>.</p>
+</li>
+<li><p>We say two sets have the same <em>cardinality</em> if there is a one-to-one correspondence between their elements.</p>
+</li>
+<li><p>By this definition, <em>natural numbers</em> and <em>even natural numbers</em> have the same cardinality.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Functions-:-semi-formal">Functions : semi-formal<a class="anchor-link" href="#Functions-:-semi-formal">&#182;</a></h2><p>A function $f: X \to Y$ is given by</p>
+<ul>
+<li>A set $X$, called the domain.</li>
+<li>A set $Y$, called the co-domain.</li>
+<li>For each $x\in X$, we associate $f(x)\in Y$.</li>
+</ul>
+<p><strong>Example:</strong> We can take $X = Y = \mathbb{N}$ and define $f(n) = 2n$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Injective-(one-to-one)">Injective (one-to-one)<a class="anchor-link" href="#Injective-(one-to-one)">&#182;</a></h3><p>A function $f: X \to Y$ is said to be <em>injective</em> if for $a, b\in X$, if $a\neq b$ then $f(a)\neq f(b)$, i.e.
+$$\forall a,b\in X, a\neq b\implies f(a)\neq f(b)$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Equivalently,
+$$\forall a, b\in X, (a = b) \lor (f(a) \neq f(b))$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">isInjective</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="k">=</span>
+     <span class="n">domain</span><span class="o">.</span><span class="n">forall</span><span class="o">{</span><span class="n">a</span> <span class="k">=&gt;</span> 
+        <span class="n">domain</span><span class="o">.</span><span class="n">forall</span><span class="o">{</span><span class="n">b</span> <span class="k">=&gt;</span>
+          <span class="o">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="o">)</span> <span class="o">||</span> <span class="o">(</span><span class="n">f</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="o">!=</span> <span class="n">f</span><span class="o">(</span><span class="n">b</span><span class="o">))}}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[36]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">isInjective</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isInjective</span><span class="o">((</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">10</span><span class="o">).</span><span class="n">toSet</span><span class="o">,</span> <span class="o">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">30</span><span class="o">).</span><span class="n">toSet</span><span class="o">,</span> <span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[37]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res36</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isInjective</span><span class="o">((</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">10</span><span class="o">).</span><span class="n">toSet</span><span class="o">,</span> <span class="o">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">30</span><span class="o">).</span><span class="n">toSet</span><span class="o">,</span> <span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">n</span><span class="o">/</span> <span class="mi">2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[38]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res37</span>: <span class="ansi-green-fg">Boolean</span> = false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isInjective</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">1</span><span class="o">))</span>
+<span class="n">isInjective</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[39]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res38_0</span>: <span class="ansi-green-fg">Boolean</span> = false
+<span class="ansi-cyan-fg">res38_1</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Range-and-surjectivity">Range and surjectivity<a class="anchor-link" href="#Range-and-surjectivity">&#182;</a></h3><p>The <em>range</em> of $f: X \to Y$ is defined as 
+$$f(X) = \{f(x): x \in X\}$$</p>
+<p>We say $f: X \to Y$ is <em>surjective</em> if $f(X) = Y$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">range</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="k">=</span>
+        <span class="n">domain</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">f</span><span class="o">)</span>
+<span class="n">range</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">1</span><span class="o">))</span>
+<span class="n">range</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[40]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">range</span>
+<span class="ansi-cyan-fg">res39_1</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>)
+<span class="ansi-cyan-fg">res39_2</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">2</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">isSurjective</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="k">=</span>
+    <span class="n">range</span><span class="o">(</span><span class="n">domain</span><span class="o">,</span> <span class="n">codomain</span><span class="o">,</span> <span class="n">f</span><span class="o">)</span> <span class="o">==</span> <span class="n">codomain</span>
+
+<span class="n">isSurjective</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">1</span><span class="o">))</span>
+<span class="n">isSurjective</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">))</span>
+<span class="n">isSurjective</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">1</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[41]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">isSurjective</span>
+<span class="ansi-cyan-fg">res40_1</span>: <span class="ansi-green-fg">Boolean</span> = false
+<span class="ansi-cyan-fg">res40_2</span>: <span class="ansi-green-fg">Boolean</span> = true
+<span class="ansi-cyan-fg">res40_3</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Bijections-and-Cardinality">Bijections and Cardinality<a class="anchor-link" href="#Bijections-and-Cardinality">&#182;</a></h3><ul>
+<li>A function $f: X \to Y$ is said to be <em>bijective</em> if it is both injective and surjective.</li>
+<li>Two sets $X$ and $Y$ have the same cardinality if there exists a bijective function $f: X \to Y$.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">isBijective</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="k">=</span>
+    <span class="n">isSurjective</span><span class="o">(</span><span class="n">domain</span><span class="o">,</span> <span class="n">codomain</span><span class="o">,</span> <span class="n">f</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">isInjective</span><span class="o">(</span><span class="n">domain</span><span class="o">,</span> <span class="n">codomain</span><span class="o">,</span> <span class="n">f</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[42]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">isBijective</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isBijective</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">6</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">2</span><span class="o">-&gt;</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">6</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[43]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res42</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isBijective</span><span class="o">(</span>
+    <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">2</span><span class="o">-&gt;</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">6</span><span class="o">)</span>
+<span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res43</span>: <span class="ansi-green-fg">Boolean</span> = false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isBijective</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">2</span><span class="o">-&gt;</span> <span class="mi">1</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">1</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[45]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res44</span>: <span class="ansi-green-fg">Boolean</span> = false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inverses-for-bijections">Inverses for bijections<a class="anchor-link" href="#Inverses-for-bijections">&#182;</a></h3><p>If $f: X \to Y$ is a bijection, then it has an <em>inverse</em> $f^{-1}: Y\to X$ so that
+$$\forall x\in X, f^{-1}(f(x)) = x$$
+and
+$$\forall y\in Y, f(f^{-1}(y)) = y$$
+and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">inverseFunction</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="o">={</span>
+    <span class="n">require</span><span class="o">(</span><span class="n">isBijective</span><span class="o">(</span><span class="n">domain</span><span class="o">,</span> <span class="n">codomain</span><span class="o">,</span> <span class="n">f</span><span class="o">),</span> 
+            <span class="s">&quot;can only invert bijections&quot;</span><span class="o">)</span>
+    <span class="o">(</span><span class="n">y</span><span class="k">:</span> <span class="kt">B</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">domain</span><span class="o">.</span><span class="n">find</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">==</span> <span class="n">y</span><span class="o">).</span><span class="n">get</span>
+<span class="o">}.</span><span class="n">ensuring</span><span class="o">{</span>
+    <span class="n">g</span> <span class="k">=&gt;</span>
+      <span class="n">domain</span><span class="o">.</span><span class="n">forall</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">g</span><span class="o">(</span><span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">))</span> <span class="o">==</span> <span class="n">x</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
+      <span class="n">codomain</span><span class="o">.</span><span class="n">forall</span><span class="o">(</span><span class="n">y</span> <span class="k">=&gt;</span> <span class="n">f</span><span class="o">(</span><span class="n">g</span><span class="o">(</span><span class="n">y</span><span class="o">))</span> <span class="o">==</span> <span class="n">y</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="n">inverseFunction</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span><span class="mi">3</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">1</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[55]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">inverseFunction</span>
+<span class="ansi-cyan-fg">res54_1</span>: <span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span> = ammonite.$sess.cmd54$Helper$$Lambda$2996/1147209840@1d5a7072</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Try</span><span class="o">{</span>
+    <span class="n">inverseFunction</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> 
+                    <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">1</span><span class="o">))</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res55</span>: <span class="ansi-green-fg">Try</span>[<span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Failure</span>(
+  java.lang.IllegalArgumentException: requirement failed: can only invert bijections
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">inverseMap</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="o">={</span>
+    <span class="n">require</span><span class="o">(</span><span class="n">isBijective</span><span class="o">(</span><span class="n">domain</span><span class="o">,</span> <span class="n">codomain</span><span class="o">,</span> <span class="n">f</span><span class="o">),</span> 
+            <span class="s">&quot;can only invert bijections&quot;</span><span class="o">)</span>
+    <span class="o">(</span><span class="n">codomain</span><span class="o">.</span><span class="n">map</span><span class="o">{</span>
+     <span class="o">(</span><span class="n">y</span><span class="k">:</span> <span class="kt">B</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">y</span> <span class="o">-&gt;</span> <span class="n">domain</span><span class="o">.</span><span class="n">find</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">==</span> <span class="n">y</span><span class="o">).</span><span class="n">get</span><span class="o">}).</span><span class="n">toMap</span>
+<span class="o">}.</span><span class="n">ensuring</span><span class="o">{</span>
+    <span class="n">g</span> <span class="k">=&gt;</span>
+      <span class="n">isBijective</span><span class="o">(</span><span class="n">codomain</span><span class="o">,</span> <span class="n">domain</span><span class="o">,</span> <span class="n">g</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
+      <span class="n">domain</span><span class="o">.</span><span class="n">forall</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">g</span><span class="o">(</span><span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">))</span> <span class="o">==</span> <span class="n">x</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
+      <span class="n">codomain</span><span class="o">.</span><span class="n">forall</span><span class="o">(</span><span class="n">y</span> <span class="k">=&gt;</span> <span class="n">f</span><span class="o">(</span><span class="n">g</span><span class="o">(</span><span class="n">y</span><span class="o">))</span> <span class="o">==</span> <span class="n">y</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[59]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">inverseMap</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">inverseMap</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">5</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[60]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res59</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Map</span>(<span class="ansi-green-fg">4</span> -&gt; <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span> -&gt; <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">6</span> -&gt; <span class="ansi-green-fg">2</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Cantor's-theorem">Cantor's theorem<a class="anchor-link" href="#Cantor's-theorem">&#182;</a></h2><p><strong>Theorem:</strong> For any set $S$, any function $f: S \to 2^S$ 
+is <em>not</em> a surjection. In particular $S$ and $2^S$ do not have the same
+cardinality.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In other words, if $f: S\to 2^S$, there exists $y\in 2^S$ 
+such that $y\notin f(S)$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Proof:</strong> We define $y\in 2^S$, i.e., $y\subset S$,
+which is not in the range by
+$$y = \{x \in S: x \notin f(x)\}$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is not in $f(S)$ as for all $x_0\in X$, then observe that
+$$x_0\in y \iff x_0 \notin f(x_0)$$
+so $y\neq f(x_0)$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">cantor</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="nc">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">])</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span> <span class="k">=</span>
+     <span class="n">s</span><span class="o">.</span><span class="n">filter</span><span class="o">{</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="o">!</span><span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">).</span><span class="n">contains</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>
+<span class="o">}.</span><span class="n">ensuring</span><span class="o">(</span><span class="n">t</span> <span class="k">=&gt;</span> <span class="o">!</span><span class="n">range</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">s</span><span class="o">.</span><span class="n">subsets</span><span class="o">.</span><span class="n">toSet</span><span class="o">,</span> <span class="n">f</span><span class="o">).</span><span class="n">contains</span><span class="o">(</span><span class="n">t</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[61]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">cantor</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">cantor</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[62]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res61</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>()</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">cantor</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[63]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res62</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">

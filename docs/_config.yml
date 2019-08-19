@@ -82,3 +82,8 @@ defaults:
       type: notebooks
     values:
       layout: blank
+  - scope:
+      path: ""
+      type: assignments
+    values:
+      layout: assignment
