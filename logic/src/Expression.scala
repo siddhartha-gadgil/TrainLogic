@@ -44,6 +44,12 @@ object Term{
             } yield x
         case Var(name) => Set(Var(name))
     }
+
+    def showTerm(t: Term) : String = t match {
+        case Const(_) => s"\u2205"
+        case Var(name) => name
+        case t => t.toString 
+    }
 }
 
 object Formula{
@@ -84,5 +90,18 @@ object Formula{
         case Exists(x, p) => freeVariables(p) - x 
         case Or(p, q) => freeVariables(p) union freeVariables(q)
     }
+
+    def pretty(formula: Formula): String = formula match {
+        case And(p, q) => s"(${pretty(p)} \u2227 ${pretty(q)})"
+        case Implies(p, q) => s"(${pretty(p)}) \u21d2 (${pretty(q)})"
+        case Not(p) => s"(\u00ac(${pretty(p)}))"
+        case Equivalent(p, q) => s"(${pretty(p)} \u21d4 ${pretty(q)})"
+        case Equality(lhs, rhs) => s"(${showTerm(lhs)} = ${showTerm(rhs)})"
+        case ForAll(x, p) => s"(\u2200${showTerm(x)}(${pretty(p)}))"
+        case Exists(x, p) => s"(\u2203${showTerm(x)}(${pretty(p)}))"
+        case Atomic(relation, arguments) => s"(${showTerm(arguments(0))} \u2208 ${showTerm(arguments(1))})"
+        case Or(p, q) => s"(${pretty(p)} \u2228 ${pretty(q)})"
+    }
+
 
 }
