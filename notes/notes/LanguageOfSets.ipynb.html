@@ -15194,7 +15194,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">inverseFunction</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="o">={</span>
@@ -15220,14 +15220,14 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">inverseFunction</span>
-<span class="ansi-cyan-fg">res54_1</span>: <span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span> = ammonite.$sess.cmd54$Helper$$Lambda$2996/1147209840@1d5a7072</pre>
+<span class="ansi-cyan-fg">res45_1</span>: <span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span> = ammonite.$sess.cmd45$Helper$$Lambda$2922/892356471@5781e1f7</pre>
 </div>
 
 </div>
@@ -15238,7 +15238,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="nc">Try</span><span class="o">{</span>
@@ -15257,13 +15257,13 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[56]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">res55</span>: <span class="ansi-green-fg">Try</span>[<span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Failure</span>(
+<pre><span class="ansi-cyan-fg">res46</span>: <span class="ansi-green-fg">Try</span>[<span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Failure</span>(
   java.lang.IllegalArgumentException: requirement failed: can only invert bijections
 )</pre>
 </div>
@@ -15276,7 +15276,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">inverseMap</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="o">={</span>
@@ -15302,7 +15302,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[59]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -15319,7 +15319,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="n">inverseMap</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">5</span><span class="o">))</span>
@@ -15335,13 +15335,13 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[60]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">res59</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Map</span>(<span class="ansi-green-fg">4</span> -&gt; <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span> -&gt; <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">6</span> -&gt; <span class="ansi-green-fg">2</span>)</pre>
+<pre><span class="ansi-cyan-fg">res48</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Map</span>(<span class="ansi-green-fg">4</span> -&gt; <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span> -&gt; <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">6</span> -&gt; <span class="ansi-green-fg">2</span>)</pre>
 </div>
 
 </div>
@@ -15391,7 +15391,7 @@ so $y\neq f(x_0)$.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">cantor</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="nc">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">])</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span> <span class="k">=</span>
@@ -15409,7 +15409,7 @@ so $y\neq f(x_0)$.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[61]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -15426,7 +15426,7 @@ so $y\neq f(x_0)$.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="n">cantor</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">)))</span>
@@ -15442,13 +15442,13 @@ so $y\neq f(x_0)$.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[62]:</div>
+    <div class="prompt output_prompt">Out[51]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">res61</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>()</pre>
+<pre><span class="ansi-cyan-fg">res50</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>()</pre>
 </div>
 
 </div>
@@ -15459,7 +15459,7 @@ so $y\neq f(x_0)$.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="n">cantor</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">)))</span>
@@ -15475,13 +15475,13 @@ so $y\neq f(x_0)$.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[63]:</div>
+    <div class="prompt output_prompt">Out[52]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">res62</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>)</pre>
+<pre><span class="ansi-cyan-fg">res51</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>)</pre>
 </div>
 
 </div>
@@ -15489,6 +15489,273 @@ so $y\neq f(x_0)$.</p>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hilbert's-hotel">Hilbert's hotel<a class="anchor-link" href="#Hilbert's-hotel">&#182;</a></h3><p>This is a hotel with infinitely many rooms, with number $1$, $2$, $3$, $4$, ...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Suppose all the rooms are occupied and a guest turns up, he can still be accomodated: shift everyone.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Suppose guests with employee codes 1, 2, 3, 4, ... turn up, all can be accomodated.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Suppose guests with employee codes all <em>infinite sequences of 0's and 1's</em> turn up, they <strong>cannot</strong> be accomodated.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparing-sets">Comparing sets<a class="anchor-link" href="#Comparing-sets">&#182;</a></h3><p>We have defined what it means for sets $A$ and $B$ to have the same size. We denote this $|A| = |B|$ (for now $|A|$ has no meaning).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question:</strong> When should we say $|A| \leq |B|$?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>If $B \subset A$ we expect $|B| \leq |A|$.</li>
+<li>If $|B| = |C|$ and $|C| \leq |A|$ then $|B| \leq |A|$.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Definition:</strong> We say $|A| \leq |B|$ if there is an injective function from $f: A \to B$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question:</strong> If $|A| \leq |B|$ and $|B| \leq |A|$, does it follow that $|A| = |B|$?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Answer:</strong> Yes. This is the Cantor-Bernstein-Shroeder theorem.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question (Trichotomy)</strong>: Given sets $A$ and $B$, is at least one of $|A| \leq |B|$ and $|B| \leq |A|$ true?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Answer:</strong> Yes. Follows from the following.</p>
+<p><strong>Proposition:</strong> There are subsets $C \subset A$ and $D \subset B$ and a bijection from $C$ to $D$ such that either $C = A$ or $D = B$.</p>
+<p>That is, there is either a bijection from a subset of $A$ to all of $B$ or from $A$ to a subset of $B$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">trichotomy</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">](</span><span class="n">A</span> <span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">X</span><span class="o">],</span> <span class="n">B</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">Y</span><span class="o">])</span> <span class="k">:</span> <span class="kt">Map</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">]</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">A</span><span class="o">.</span><span class="n">isEmpty</span> <span class="o">||</span> <span class="n">B</span><span class="o">.</span><span class="n">isEmpty</span><span class="o">)</span> <span class="nc">Map</span><span class="o">[</span><span class="kt">X</span>,<span class="kt">Y</span><span class="o">]()</span>
+    <span class="k">else</span> <span class="o">{</span>
+        <span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="n">A</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="n">B</span><span class="o">.</span><span class="n">head</span>
+        <span class="n">trichotomy</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">](</span><span class="n">A</span> <span class="o">-</span> <span class="n">x</span><span class="o">,</span> <span class="n">B</span> <span class="o">-</span> <span class="n">y</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">y</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}.</span><span class="n">ensuring</span><span class="o">{(</span><span class="n">f</span> <span class="k">:</span> <span class="kt">Map</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">])</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="n">keySet</span> <span class="o">==</span> <span class="n">A</span> <span class="o">||</span> <span class="n">f</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">toSet</span> <span class="o">==</span> <span class="n">B</span><span class="o">)</span> <span class="o">&amp;&amp;</span> 
+           <span class="n">f</span><span class="o">.</span><span class="n">keySet</span><span class="o">.</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">A</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
+           <span class="n">f</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">toSet</span><span class="o">.</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">B</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
+           <span class="n">isBijective</span><span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="n">keySet</span><span class="o">,</span> <span class="n">f</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">toSet</span><span class="o">,</span> <span class="n">f</span><span class="o">)</span>
+          <span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[55]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">trichotomy</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">trichotomy</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res55</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Map</span>(<span class="ansi-green-fg">4</span> -&gt; <span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">2</span> -&gt; <span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">1</span> -&gt; <span class="ansi-green-fg">1</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">trichotomy</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[57]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res56</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Boolean</span>, <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Map</span>(false -&gt; <span class="ansi-green-fg">4</span>, true -&gt; <span class="ansi-green-fg">3</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">trichotomy</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="s">&quot;Hello&quot;</span><span class="o">,</span> <span class="s">&quot;Hi&quot;</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[58]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res57</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">String</span>] = <span class="ansi-yellow-fg">Map</span>(<span class="ansi-green-fg">2</span> -&gt; <span class="ansi-green-fg">&#34;Hi&#34;</span>, <span class="ansi-green-fg">1</span> -&gt; <span class="ansi-green-fg">&#34;Hello&#34;</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the finite case, this terminates by induction. In general, we have to use <em>transfinite induction</em>.</p>
+<p><strong>Definition:</strong> A set $A$ is said to be <em>countable</em> if $|A| \leq |\mathbb{N}|$. Otherwise we say it is <em>uncountable</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Propn:</strong> If $A$ is countable either $A$ is finite or $|A| = \mathbb{N}$</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
