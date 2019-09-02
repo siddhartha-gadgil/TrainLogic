@@ -15194,7 +15194,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">inverseFunction</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="o">={</span>
@@ -15220,14 +15220,14 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">inverseFunction</span>
-<span class="ansi-cyan-fg">res54_1</span>: <span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span> = ammonite.$sess.cmd54$Helper$$Lambda$2996/1147209840@1d5a7072</pre>
+<span class="ansi-cyan-fg">res45_1</span>: <span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span> = ammonite.$sess.cmd45$Helper$$Lambda$2934/99060392@286ef9a7</pre>
 </div>
 
 </div>
@@ -15238,7 +15238,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="nc">Try</span><span class="o">{</span>
@@ -15257,13 +15257,13 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[56]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">res55</span>: <span class="ansi-green-fg">Try</span>[<span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Failure</span>(
+<pre><span class="ansi-cyan-fg">res46</span>: <span class="ansi-green-fg">Try</span>[<span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Failure</span>(
   java.lang.IllegalArgumentException: requirement failed: can only invert bijections
 )</pre>
 </div>
@@ -15276,7 +15276,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">inverseMap</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">domain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">codomain</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">B</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">B</span><span class="o">)</span> <span class="o">={</span>
@@ -15302,7 +15302,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[59]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -15319,7 +15319,7 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="n">inverseMap</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="mi">5</span><span class="o">))</span>
@@ -15335,13 +15335,13 @@ and conversely. Further, $f^{-1}: Y \to X$ is a bijection.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[60]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">res59</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Map</span>(<span class="ansi-green-fg">4</span> -&gt; <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span> -&gt; <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">6</span> -&gt; <span class="ansi-green-fg">2</span>)</pre>
+<pre><span class="ansi-cyan-fg">res48</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Map</span>(<span class="ansi-green-fg">4</span> -&gt; <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span> -&gt; <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">6</span> -&gt; <span class="ansi-green-fg">2</span>)</pre>
 </div>
 
 </div>
@@ -15391,12 +15391,643 @@ so $y\neq f(x_0)$.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">cantor</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">f</span><span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="nc">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">])</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span> <span class="k">=</span>
      <span class="n">s</span><span class="o">.</span><span class="n">filter</span><span class="o">{</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="o">!</span><span class="n">f</span><span class="o">(</span><span class="n">x</span><span class="o">).</span><span class="n">contains</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>
 <span class="o">}.</span><span class="n">ensuring</span><span class="o">(</span><span class="n">t</span> <span class="k">=&gt;</span> <span class="o">!</span><span class="n">range</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">s</span><span class="o">.</span><span class="n">subsets</span><span class="o">.</span><span class="n">toSet</span><span class="o">,</span> <span class="n">f</span><span class="o">).</span><span class="n">contains</span><span class="o">(</span><span class="n">t</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[50]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">cantor</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">cantor</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[51]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res50</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>()</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">cantor</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[52]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res51</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hilbert's-hotel">Hilbert's hotel<a class="anchor-link" href="#Hilbert's-hotel">&#182;</a></h3><p>This is a hotel with infinitely many rooms, with number $1$, $2$, $3$, $4$, ...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Suppose all the rooms are occupied and a guest turns up, he can still be accomodated: shift everyone.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Suppose guests with employee codes 1, 2, 3, 4, ... turn up, all can be accomodated.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Suppose guests with employee codes all <em>infinite sequences of 0's and 1's</em> turn up, they <strong>cannot</strong> be accomodated.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Comparing-sets">Comparing sets<a class="anchor-link" href="#Comparing-sets">&#182;</a></h3><p>We have defined what it means for sets $A$ and $B$ to have the same size. We denote this $|A| = |B|$ (for now $|A|$ has no meaning).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question:</strong> When should we say $|A| \leq |B|$?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>If $B \subset A$ we expect $|B| \leq |A|$.</li>
+<li>If $|B| = |C|$ and $|C| \leq |A|$ then $|B| \leq |A|$.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Definition:</strong> We say $|A| \leq |B|$ if there is an injective function from $f: A \to B$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question:</strong> If $|A| \leq |B|$ and $|B| \leq |A|$, does it follow that $|A| = |B|$?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Answer:</strong> Yes. This is the Cantor-Bernstein-Shroeder theorem.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question (Trichotomy)</strong>: Given sets $A$ and $B$, is at least one of $|A| \leq |B|$ and $|B| \leq |A|$ true?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Answer:</strong> Yes. Follows from the following.</p>
+<p><strong>Proposition:</strong> There are subsets $C \subset A$ and $D \subset B$ and a bijection from $C$ to $D$ such that either $C = A$ or $D = B$.</p>
+<p>That is, there is either a bijection from a subset of $A$ to all of $B$ or from $A$ to a subset of $B$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">trichotomy</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">](</span><span class="n">A</span> <span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">X</span><span class="o">],</span> <span class="n">B</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">Y</span><span class="o">])</span> <span class="k">:</span> <span class="kt">Map</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">]</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">A</span><span class="o">.</span><span class="n">isEmpty</span> <span class="o">||</span> <span class="n">B</span><span class="o">.</span><span class="n">isEmpty</span><span class="o">)</span> <span class="nc">Map</span><span class="o">[</span><span class="kt">X</span>,<span class="kt">Y</span><span class="o">]()</span>
+    <span class="k">else</span> <span class="o">{</span>
+        <span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="n">A</span><span class="o">.</span><span class="n">head</span>
+        <span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="n">B</span><span class="o">.</span><span class="n">head</span>
+        <span class="n">trichotomy</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">](</span><span class="n">A</span> <span class="o">-</span> <span class="n">x</span><span class="o">,</span> <span class="n">B</span> <span class="o">-</span> <span class="n">y</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">y</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}.</span><span class="n">ensuring</span><span class="o">{(</span><span class="n">f</span> <span class="k">:</span> <span class="kt">Map</span><span class="o">[</span><span class="kt">X</span>, <span class="kt">Y</span><span class="o">])</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="n">keySet</span> <span class="o">==</span> <span class="n">A</span> <span class="o">||</span> <span class="n">f</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">toSet</span> <span class="o">==</span> <span class="n">B</span><span class="o">)</span> <span class="o">&amp;&amp;</span> 
+           <span class="n">f</span><span class="o">.</span><span class="n">keySet</span><span class="o">.</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">A</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
+           <span class="n">f</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">toSet</span><span class="o">.</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">B</span><span class="o">)</span> <span class="o">&amp;&amp;</span>
+           <span class="n">isBijective</span><span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="n">keySet</span><span class="o">,</span> <span class="n">f</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">toSet</span><span class="o">,</span> <span class="n">f</span><span class="o">)</span>
+          <span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[53]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">trichotomy</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">trichotomy</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[54]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res53</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Map</span>(<span class="ansi-green-fg">4</span> -&gt; <span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">2</span> -&gt; <span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">1</span> -&gt; <span class="ansi-green-fg">1</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">trichotomy</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[55]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res54</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Boolean</span>, <span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Map</span>(false -&gt; <span class="ansi-green-fg">4</span>, true -&gt; <span class="ansi-green-fg">3</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">trichotomy</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">),</span> <span class="nc">Set</span><span class="o">(</span><span class="s">&quot;Hello&quot;</span><span class="o">,</span> <span class="s">&quot;Hi&quot;</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res55</span>: <span class="ansi-green-fg">Map</span>[<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">String</span>] = <span class="ansi-yellow-fg">Map</span>(<span class="ansi-green-fg">2</span> -&gt; <span class="ansi-green-fg">&#34;Hi&#34;</span>, <span class="ansi-green-fg">1</span> -&gt; <span class="ansi-green-fg">&#34;Hello&#34;</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the finite case, this terminates by induction. In general, we have to use <em>transfinite induction</em>.</p>
+<p><strong>Definition:</strong> A set $A$ is said to be <em>countable</em> if $|A| \leq |\mathbb{N}|$. Otherwise we say it is <em>uncountable</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Propn:</strong> If $A$ is countable either $A$ is finite or $|A| = \mathbb{N}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Relations">Relations<a class="anchor-link" href="#Relations">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A relation $R$ on a set $A$ is a subset of $A \times A$. We think of $(a, b)\in R$ as $A$ is related to $R$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Examples:</p>
+<ul>
+<li>Two sets are related if they have the same cardinality.</li>
+<li>Two sets $A$ and $B$ are related if $|A| \leq |B|$.</li>
+<li>Two numbers are related if their difference is divisible by $3$.</li>
+<li>Two numbers $n$ and $m$ are related if $n$ exactly divides $m$.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">relation</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">property</span> <span class="k">:</span> <span class="o">(</span><span class="kt">A</span><span class="o">,</span> <span class="kt">A</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Boolean</span><span class="o">)</span> <span class="k">=</span>
+       <span class="k">for</span> <span class="o">{</span>
+           <span class="n">x</span> <span class="k">&lt;-</span> <span class="n">s</span>
+           <span class="n">y</span> <span class="k">&lt;-</span> <span class="n">s</span>
+           <span class="k">if</span> <span class="n">property</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span>
+       <span class="o">}</span> <span class="k">yield</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[57]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">relation</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">s</span> <span class="k">=</span> <span class="o">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">10</span><span class="o">).</span><span class="n">toSet</span>
+<span class="k">val</span> <span class="n">diffDiv3</span> <span class="k">=</span> <span class="n">relation</span><span class="o">[</span><span class="kt">Int</span><span class="o">](</span><span class="n">s</span><span class="o">,</span> <span class="o">{(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="o">)</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="o">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[58]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">s</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">4</span>)
+<span class="ansi-cyan-fg">diffDiv3</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>)] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">3</span>)
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">divides</span> <span class="k">=</span> <span class="n">relation</span><span class="o">[</span><span class="kt">Int</span><span class="o">](</span><span class="n">s</span><span class="o">,</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">y</span> <span class="o">%</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[59]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">divides</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>)] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">9</span>)
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">sumDiv3</span> <span class="k">=</span> <span class="n">relation</span><span class="o">[</span><span class="kt">Int</span><span class="o">](</span><span class="n">s</span><span class="o">,</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">)</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[60]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">sumDiv3</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>)] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">7</span>)
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Properties-of-a-relation-$R$-on-$S$">Properties of a relation $R$ on $S$<a class="anchor-link" href="#Properties-of-a-relation-$R$-on-$S$">&#182;</a></h3><ul>
+<li><em>Reflexive</em> : For all $a\in S$, $(a, a)\in R$</li>
+<li><em>Symmetric</em> : For all $a, b\in S$, if $(a, b)\in R$ then $(b, a)\in R$.</li>
+<li><em>Transitive</em> : For all $a, b, c\in S$, if $(a, b)\in R$ and $(b, c)\in R$ then $(a, c)\in R$. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">isReflexive</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">=</span> 
+      <span class="n">s</span><span class="o">.</span><span class="n">forall</span><span class="o">(</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">contains</span><span class="o">((</span><span class="n">x</span><span class="o">,</span> <span class="n">x</span><span class="o">)))</span>
 </pre></div>
 
     </div>
@@ -15415,7 +16046,7 @@ so $y\neq f(x_0)$.</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">cantor</span></pre>
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">isReflexive</span></pre>
 </div>
 
 </div>
@@ -15429,7 +16060,9 @@ so $y\neq f(x_0)$.</p>
 <div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-scala"><pre><span></span><span class="n">cantor</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">)))</span>
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isReflexive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">diffDiv3</span><span class="o">)</span>
+<span class="n">isReflexive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">divides</span><span class="o">)</span>
+<span class="n">isReflexive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">sumDiv3</span><span class="o">)</span>
 </pre></div>
 
     </div>
@@ -15448,7 +16081,9 @@ so $y\neq f(x_0)$.</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">res61</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>()</pre>
+<pre><span class="ansi-cyan-fg">res61_0</span>: <span class="ansi-green-fg">Boolean</span> = true
+<span class="ansi-cyan-fg">res61_1</span>: <span class="ansi-green-fg">Boolean</span> = true
+<span class="ansi-cyan-fg">res61_2</span>: <span class="ansi-green-fg">Boolean</span> = false</pre>
 </div>
 
 </div>
@@ -15462,7 +16097,8 @@ so $y\neq f(x_0)$.</p>
 <div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-scala"><pre><span></span><span class="n">cantor</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="nc">Map</span><span class="o">(</span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="mi">3</span> <span class="o">-&gt;</span> <span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">)))</span>
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">isSymmetric</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">=</span>
+        <span class="n">r</span> <span class="o">==</span> <span class="n">r</span><span class="o">.</span><span class="n">map</span><span class="o">{</span><span class="k">case</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">y</span><span class="o">,</span> <span class="n">x</span><span class="o">)}</span>
 </pre></div>
 
     </div>
@@ -15481,7 +16117,2120 @@ so $y\neq f(x_0)$.</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre><span class="ansi-cyan-fg">res62</span>: <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>)</pre>
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">isSymmetric</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isSymmetric</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">diffDiv3</span><span class="o">)</span>
+<span class="n">isSymmetric</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">divides</span><span class="o">)</span>
+<span class="n">isSymmetric</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">sumDiv3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[64]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res63_0</span>: <span class="ansi-green-fg">Boolean</span> = true
+<span class="ansi-cyan-fg">res63_1</span>: <span class="ansi-green-fg">Boolean</span> = false
+<span class="ansi-cyan-fg">res63_2</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">isTransitive</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span>
+     <span class="n">s</span><span class="o">.</span><span class="n">forall</span><span class="o">{</span><span class="n">a</span> <span class="k">=&gt;</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">forall</span><span class="o">{</span><span class="n">b</span> <span class="k">=&gt;</span>
+           <span class="n">s</span><span class="o">.</span><span class="n">forall</span><span class="o">{</span><span class="n">c</span> <span class="k">=&gt;</span>
+               <span class="o">!</span><span class="n">r</span><span class="o">.</span><span class="n">contains</span><span class="o">((</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">))</span> <span class="o">||</span> <span class="o">!</span><span class="n">r</span><span class="o">.</span><span class="n">contains</span><span class="o">((</span><span class="n">b</span><span class="o">,</span> <span class="n">c</span><span class="o">))</span> <span class="o">||</span> 
+               <span class="n">r</span><span class="o">.</span><span class="n">contains</span><span class="o">((</span><span class="n">a</span><span class="o">,</span> <span class="n">c</span><span class="o">))</span> <span class="o">}}}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[68]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">isTransitive</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isTransitive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">divides</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[69]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res68</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isTransitive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">diffDiv3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[70]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res69</span>: <span class="ansi-green-fg">Boolean</span> = true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isTransitive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">sumDiv3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[71]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res70</span>: <span class="ansi-green-fg">Boolean</span> = false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reflexive,-Symmetric,-Transitive-closures">Reflexive, Symmetric, Transitive <em>closures</em><a class="anchor-link" href="#Reflexive,-Symmetric,-Transitive-closures">&#182;</a></h3><p>If a relation $R$ does not have one or more of these properties, we find the smallest relation on $S$ that contains $R$ and has the property.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">reflexiveClosure</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">=</span>
+<span class="o">{</span><span class="n">r</span> <span class="n">union</span> <span class="n">s</span><span class="o">.</span><span class="n">map</span><span class="o">{</span><span class="n">a</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">a</span><span class="o">)}}.</span><span class="n">ensuring</span><span class="o">{</span><span class="n">r1</span> <span class="k">=&gt;</span> <span class="n">isReflexive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">r1</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">r</span><span class="o">.</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">r1</span><span class="o">)}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[74]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">reflexiveClosure</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">reflexiveClosure</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">sumDiv3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[75]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res74</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>)] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">7</span>)
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">symmetricClosure</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">=</span> 
+<span class="o">{</span><span class="n">r</span> <span class="n">union</span> <span class="n">r</span><span class="o">.</span><span class="n">map</span><span class="o">{</span><span class="k">case</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">b</span><span class="o">,</span> <span class="n">a</span><span class="o">)}}.</span><span class="n">ensuring</span><span class="o">{</span>
+    <span class="n">r1</span> <span class="k">=&gt;</span> <span class="n">isSymmetric</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">r1</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">r</span><span class="o">.</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">r1</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[76]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">symmetricClosure</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">symmetricClosure</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">divides</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[77]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res76</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>)] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">4</span>),
+...</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">diff2</span> <span class="k">=</span> <span class="n">relation</span><span class="o">[</span><span class="kt">Int</span><span class="o">](</span><span class="n">s</span><span class="o">,</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">y</span> <span class="o">-</span><span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[78]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">diff2</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>)] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">4</span>)
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isTransitive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">diff2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[79]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res78</span>: <span class="ansi-green-fg">Boolean</span> = false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">transiviteClosureStep</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">=</span> 
+       <span class="n">r</span> <span class="n">union</span> <span class="o">{</span>
+           <span class="k">for</span> <span class="o">{</span>
+               <span class="n">a</span> <span class="k">&lt;-</span> <span class="n">s</span>
+               <span class="n">b</span> <span class="k">&lt;-</span> <span class="n">s</span>
+               <span class="n">c</span> <span class="k">&lt;-</span> <span class="n">s</span>
+               <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">contains</span><span class="o">((</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">))</span> <span class="o">&amp;&amp;</span> <span class="n">r</span><span class="o">.</span><span class="n">contains</span><span class="o">((</span><span class="n">b</span><span class="o">,</span> <span class="n">c</span><span class="o">))</span>
+           <span class="o">}</span> <span class="k">yield</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">c</span><span class="o">)</span>
+       <span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[80]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">transiviteClosureStep</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">transiviteClosureStep</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">diff2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[81]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res80</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>)] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">7</span>)
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">transitiveClosure</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span> <span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)]</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">nextStep</span> <span class="k">=</span> <span class="n">transiviteClosureStep</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">r</span><span class="o">)</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">r</span> <span class="o">==</span> <span class="n">nextStep</span><span class="o">)</span> <span class="n">r</span> <span class="k">else</span> <span class="n">transitiveClosure</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">nextStep</span><span class="o">)</span>
+<span class="o">}.</span><span class="n">ensuring</span><span class="o">{</span><span class="n">r1</span> <span class="k">=&gt;</span> <span class="n">isTransitive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">r1</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">r</span><span class="o">.</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">r1</span><span class="o">)</span> <span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[82]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">transitiveClosure</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">transitiveClosure</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">diff2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[83]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res82</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>)] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">7</span>)
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Equivalence-relation">Equivalence relation<a class="anchor-link" href="#Equivalence-relation">&#182;</a></h3><p>An <em>equivalence relation</em> is a relation that is reflexive, symmetric and transitive.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">isEquivalence</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span>
+     <span class="n">isReflexive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">r</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">isSymmetric</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">r</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">isTransitive</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">r</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[84]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">isEquivalence</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">equivalenceClosure</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">=</span> 
+       <span class="n">transitiveClosure</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">symmetricClosure</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">reflexiveClosure</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">r</span><span class="o">))).</span>
+    <span class="n">ensuring</span><span class="o">{</span>
+           <span class="n">r1</span> <span class="k">=&gt;</span> <span class="n">isEquivalence</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">r1</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">r</span><span class="o">.</span><span class="n">subsetOf</span><span class="o">(</span><span class="n">r1</span><span class="o">)</span>
+       <span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[86]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">equivalenceClosure</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">equivDiff2</span> <span class="k">=</span> <span class="n">equivalenceClosure</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">diff2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[89]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">equivDiff2</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>)] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">4</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">10</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">1</span>),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">7</span>),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">6</span>),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">2</span>),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">5</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">8</span>),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">2</span>),
+...</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We say the <em>orbit</em> of $x$ in an equivalence relation $R$ is $$\{y \in S: (x, y)\in R\}$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">orbit</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">x</span><span class="k">:</span> <span class="kt">A</span><span class="o">,</span> <span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">=</span>
+      <span class="n">s</span><span class="o">.</span><span class="n">filter</span><span class="o">{</span><span class="n">y</span> <span class="k">=&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">contains</span><span class="o">((</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">))}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[88]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">orbit</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">orbitMap</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">s</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">r</span><span class="k">:</span> <span class="kt">Set</span><span class="o">[(</span><span class="kt">A</span>, <span class="kt">A</span><span class="o">)])</span> <span class="k">=</span> 
+     <span class="n">s</span><span class="o">.</span><span class="n">map</span><span class="o">{</span><span class="n">x</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">orbit</span><span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">s</span><span class="o">,</span> <span class="n">r</span><span class="o">)}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[91]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">orbitMap</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">orbitMap</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">equivDiff2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[92]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res91</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>])] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>)),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>)),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>)),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>)),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">3</span>))
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">orbitMap</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">diffDiv3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[93]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res92</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>])] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>)),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>)),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">3</span>)),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>)),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">3</span>)),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">3</span>))
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Thus, for an equivalence relation $R$ on $S$, the orbits form a <em>partition</em> of $S$,
+i.e., we get a collection of disjoint sets whose union is $S$. These are called <em>equivalence classes</em>.</p>
+<p>Furthermore, two elements $x$ and $y$ are related if and only if they both belong to some equivalence class.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">orbitMap</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">sumDiv3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[94]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res93</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>])] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">6</span>)),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">8</span>)),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">7</span>)),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">8</span>)),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">7</span>)),
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">6</span>)),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">4</span>)),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">10</span>)),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">10</span>))
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">isEquivalence</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">sumDiv3</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[95]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res94</span>: <span class="ansi-green-fg">Boolean</span> = false</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">orbitMap</span><span class="o">(</span><span class="n">s</span><span class="o">,</span> <span class="n">diff2</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[96]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res95</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>])] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">3</span>)),
+  (<span class="ansi-green-fg">5</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">7</span>)),
+  (<span class="ansi-green-fg">8</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">10</span>)),
+  (<span class="ansi-green-fg">7</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">9</span>)),
+  (<span class="ansi-green-fg">9</span>, <span class="ansi-yellow-fg">Set</span>()),
+  (<span class="ansi-green-fg">10</span>, <span class="ansi-yellow-fg">Set</span>()),
+  (<span class="ansi-green-fg">6</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">8</span>)),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">5</span>)),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">6</span>)),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">4</span>))
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">orbitMap</span><span class="o">(</span><span class="nc">Set</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">),</span> <span class="nc">Set</span><span class="o">((</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">),(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">2</span><span class="o">),</span> <span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">1</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[98]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res97</span>: <span class="ansi-green-fg">Set</span>[(<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Set</span>[<span class="ansi-green-fg">Int</span>])] = <span class="ansi-yellow-fg">Set</span>(
+  (<span class="ansi-green-fg">1</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>)),
+  (<span class="ansi-green-fg">2</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>)),
+  (<span class="ansi-green-fg">3</span>, <span class="ansi-yellow-fg">Set</span>(<span class="ansi-green-fg">1</span>)),
+  (<span class="ansi-green-fg">4</span>, <span class="ansi-yellow-fg">Set</span>())
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Partial-order">Partial order<a class="anchor-link" href="#Partial-order">&#182;</a></h2><ul>
+<li>A reflexive relation $R$ on $S$ is anti-symmetric if $(a, b)\in R \land (b, a)\in R \implies a = b$.</li>
+<li>A partial-order is a relation that is reflexive, transitive and anti-symmetric.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Type-theory">Type theory<a class="anchor-link" href="#Type-theory">&#182;</a></h1><ul>
+<li>In formal languages(e.g. FOL)/natural languages/programming languages, expressions/words and phrases/objects have <em>types</em> (parts of speech).</li>
+<li>Rules for forming expressions are in terms of types only.</li>
+<li>In First-order languages and Natural languages, the collection of types is fixed.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <em>type theory</em> means:</p>
+<ul>
+<li><em>minimal view:</em> there are rules forming new types.</li>
+<li><em>maximal view:</em> types are rich enough to form foundations replacing Set Theory and FOL as well as $\lambda$-calculus.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In <em>scala</em> and most other languages, we have various types we can form. The most important is that given types $A$ and $B$, we can form the function type $A \to B$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">next</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">Int</span> <span class="k">=</span> <span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[99]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">next</span>: <span class="ansi-green-fg">Int</span> =&gt; <span class="ansi-green-fg">Int</span> = ammonite.$sess.cmd98$Helper$$Lambda$3651/1830093790@5989799a</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are also prebuilt types and type constructors: <em>pairs</em>, <em>unit</em> and <em>zero</em> (nothing)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[100]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res99</span>: (<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">Int</span>) = (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="s">&quot;Hello World&quot;</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[101]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res100</span>: (<span class="ansi-green-fg">Int</span>, <span class="ansi-green-fg">String</span>) = (<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">&#34;Hello World&#34;</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="o">()</span> <span class="k">:</span> <span class="kt">Unit</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Unit type is a type with just one object (in scala it is also called Unit).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">println</span> <span class="k">_</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[104]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res103</span>: () =&gt; <span class="ansi-green-fg">Unit</span> = ammonite.$sess.cmd103$Helper$$Lambda$3668/340148172@1c32095b</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">result</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="s">&quot;Hello types&quot;</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello types
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">result</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Unit</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[107]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res106</span>: <span class="ansi-green-fg">Unit</span>.type = object scala.Unit</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We also have <em>inductive types</em>, which are types whose objects are generated by given introduction rules. In scala these are given by a <code>sealed trait</code> and <code>case class</code> (or <code>case object</code>) statements.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">sealed</span> <span class="k">trait</span> <span class="nc">BinTree</span>
+
+<span class="k">case</span> <span class="k">object</span> <span class="nc">Leaf</span> <span class="k">extends</span> <span class="nc">BinTree</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Node</span><span class="o">(</span><span class="n">left</span><span class="k">:</span> <span class="kt">BinTree</span><span class="o">,</span> <span class="n">right</span><span class="k">:</span> <span class="kt">BinTree</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">BinTree</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[108]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">trait</span> <span class="ansi-cyan-fg">BinTree</span>
+defined <span class="ansi-green-fg">object</span> <span class="ansi-cyan-fg">Leaf</span>
+defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">Node</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">egTree</span> <span class="k">:</span> <span class="kt">BinTree</span> <span class="o">=</span> <span class="nc">Node</span><span class="o">(</span><span class="nc">Node</span><span class="o">(</span><span class="nc">Leaf</span><span class="o">,</span> <span class="nc">Leaf</span><span class="o">),</span> <span class="nc">Node</span><span class="o">(</span><span class="nc">Node</span><span class="o">(</span><span class="nc">Leaf</span><span class="o">,</span> <span class="nc">Leaf</span><span class="o">),</span> <span class="nc">Leaf</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[110]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">egTree</span>: <span class="ansi-green-fg">BinTree</span> = <span class="ansi-yellow-fg">Node</span>(<span class="ansi-yellow-fg">Node</span>(Leaf, Leaf), <span class="ansi-yellow-fg">Node</span>(<span class="ansi-yellow-fg">Node</span>(Leaf, Leaf), Leaf))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Functions on these can be defined by recursion/induction.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">vertices</span><span class="o">(</span><span class="n">t</span><span class="k">:</span> <span class="kt">BinTree</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">t</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nc">Leaf</span> <span class="k">=&gt;</span> <span class="mi">1</span>
+    <span class="k">case</span> <span class="nc">Node</span><span class="o">(</span><span class="n">t1</span><span class="o">,</span> <span class="n">t2</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">vertices</span><span class="o">(</span><span class="n">t1</span><span class="o">)</span> <span class="o">+</span> <span class="n">vertices</span><span class="o">(</span><span class="n">t2</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[111]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">vertices</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">vertices</span><span class="o">(</span><span class="n">egTree</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[112]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res111</span>: <span class="ansi-green-fg">Int</span> = <span class="ansi-green-fg">9</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Types, including inductive types, can depend on other types. For example, we can define Labelled trees labelled with leaves having labels in $A$. We call these <em>type families</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">sealed</span> <span class="k">trait</span> <span class="nc">LabelledTree</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span>
+
+<span class="nc">case</span> <span class="k">class</span> <span class="nc">LabelledLeaf</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">label</span><span class="k">:</span> <span class="kt">A</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">LabelledTree</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span>
+
+<span class="k">case</span> <span class="k">class</span> <span class="nc">LabelledNode</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span>
+    <span class="n">left</span><span class="k">:</span> <span class="kt">LabelledTree</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">right</span><span class="k">:</span> <span class="kt">LabelledTree</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span>
+<span class="o">)</span> <span class="k">extends</span> <span class="nc">LabelledTree</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[113]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">trait</span> <span class="ansi-cyan-fg">LabelledTree</span>
+defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">LabelledLeaf</span>
+defined <span class="ansi-green-fg">class</span> <span class="ansi-cyan-fg">LabelledNode</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">egLT</span> <span class="k">=</span> <span class="nc">LabelledNode</span><span class="o">(</span><span class="nc">LabelledLeaf</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> 
+                        <span class="nc">LabelledNode</span><span class="o">(</span><span class="nc">LabelledLeaf</span><span class="o">(</span><span class="mi">2</span><span class="o">),</span> <span class="nc">LabelledLeaf</span><span class="o">(</span><span class="mi">3</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[114]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">egLT</span>: <span class="ansi-green-fg">LabelledNode</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">LabelledNode</span>(
+  <span class="ansi-yellow-fg">LabelledLeaf</span>(<span class="ansi-green-fg">1</span>),
+  <span class="ansi-yellow-fg">LabelledNode</span>(<span class="ansi-yellow-fg">LabelledLeaf</span>(<span class="ansi-green-fg">2</span>), <span class="ansi-yellow-fg">LabelledLeaf</span>(<span class="ansi-green-fg">3</span>))
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">val</span> <span class="n">stringyTree</span> <span class="k">=</span> <span class="nc">LabelledNode</span><span class="o">(</span><span class="nc">LabelledLeaf</span><span class="o">(</span><span class="s">&quot;Hello&quot;</span><span class="o">),</span> 
+                        <span class="nc">LabelledNode</span><span class="o">(</span><span class="nc">LabelledLeaf</span><span class="o">(</span><span class="s">&quot;Tree&quot;</span><span class="o">),</span> 
+                                     <span class="nc">LabelledLeaf</span><span class="o">(</span><span class="s">&quot;with labels&quot;</span><span class="o">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[115]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">stringyTree</span>: <span class="ansi-green-fg">LabelledNode</span>[<span class="ansi-green-fg">String</span>] = <span class="ansi-yellow-fg">LabelledNode</span>(
+  <span class="ansi-yellow-fg">LabelledLeaf</span>(<span class="ansi-green-fg">&#34;Hello&#34;</span>),
+  <span class="ansi-yellow-fg">LabelledNode</span>(<span class="ansi-yellow-fg">LabelledLeaf</span>(<span class="ansi-green-fg">&#34;Tree&#34;</span>), <span class="ansi-yellow-fg">LabelledLeaf</span>(<span class="ansi-green-fg">&#34;with labels&#34;</span>))
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">labels</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">t</span><span class="k">:</span> <span class="kt">LabelledTree</span><span class="o">[</span><span class="kt">A</span><span class="o">])</span> <span class="k">:</span> <span class="kt">Vector</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span> <span class="k">=</span> <span class="n">t</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nc">LabelledLeaf</span><span class="o">(</span><span class="n">l</span> <span class="k">:</span> <span class="kt">A</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Vector</span><span class="o">(</span><span class="n">l</span><span class="o">)</span>
+    <span class="k">case</span> <span class="nc">LabelledNode</span><span class="o">(</span><span class="n">t1</span><span class="o">,</span> <span class="n">t2</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">labels</span><span class="o">(</span><span class="n">t1</span><span class="o">)</span> <span class="o">++</span> <span class="n">labels</span><span class="o">(</span><span class="n">t2</span><span class="o">)</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[116]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">labels</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">labels</span><span class="o">(</span><span class="n">egLT</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[117]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res116</span>: <span class="ansi-green-fg">Vector</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">labels</span><span class="o">(</span><span class="n">stringyTree</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[118]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res117</span>: <span class="ansi-green-fg">Vector</span>[<span class="ansi-green-fg">String</span>] = <span class="ansi-yellow-fg">Vector</span>(<span class="ansi-green-fg">&#34;Hello&#34;</span>, <span class="ansi-green-fg">&#34;Tree&#34;</span>, <span class="ansi-green-fg">&#34;with labels&#34;</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">cannotDefine</span> <span class="k">:</span> <span class="kt">Nothing</span> <span class="o">=</span> <span class="o">???</span> <span class="c1">// Nothing is a type with no objects</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[119]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">cannotDefine</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A type system at this level allows us to check some properties, but not all at the level of syntax (i.e. at compile time).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="c1">// math.sqrt(&quot;Hello world&quot;) - will not compile</span>
+<span class="nc">Try</span><span class="o">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="o">(-</span><span class="mi">1</span><span class="o">))</span> <span class="c1">// this will compile</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[120]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res119</span>: <span class="ansi-green-fg">Try</span>[<span class="ansi-green-fg">Double</span>] = <span class="ansi-yellow-fg">Success</span>(<span class="ansi-green-fg">NaN</span>)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For example, if we want to take half of only even integers, we can do this using require and ensuring but not at type level (in a simple way).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">half</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">require</span><span class="o">(</span><span class="n">n</span> <span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">,</span> <span class="s">&quot;cannot take half of an odd number&quot;</span><span class="o">)</span>
+    <span class="n">n</span> <span class="o">/</span><span class="mi">2</span>
+<span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[121]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">half</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">double</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n</span><span class="o">).</span><span class="n">ensuring</span><span class="o">{</span><span class="n">k</span> <span class="k">=&gt;</span> <span class="n">k</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[122]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">double</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="k">def</span> <span class="n">halfDouble</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">half</span><span class="o">(</span><span class="n">double</span><span class="o">(</span><span class="n">n</span><span class="o">))</span>
+<span class="o">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">10</span><span class="o">).</span><span class="n">map</span><span class="o">(</span><span class="n">halfDouble</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[123]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">halfDouble</span>
+<span class="ansi-cyan-fg">res122_1</span>: <span class="ansi-green-fg">collection</span>.<span class="ansi-green-fg">immutable</span>.<span class="ansi-green-fg">IndexedSeq</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Vector</span>(
+  <span class="ansi-green-fg">1</span>,
+  <span class="ansi-green-fg">2</span>,
+  <span class="ansi-green-fg">3</span>,
+  <span class="ansi-green-fg">4</span>,
+  <span class="ansi-green-fg">5</span>,
+  <span class="ansi-green-fg">6</span>,
+  <span class="ansi-green-fg">7</span>,
+  <span class="ansi-green-fg">8</span>,
+  <span class="ansi-green-fg">9</span>,
+  <span class="ansi-green-fg">10</span>
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[124]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="nc">Try</span><span class="o">(</span><span class="n">half</span><span class="o">(</span><span class="mi">3</span><span class="o">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[124]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res123</span>: <span class="ansi-green-fg">Try</span>[<span class="ansi-green-fg">Int</span>] = <span class="ansi-yellow-fg">Failure</span>(
+  java.lang.IllegalArgumentException: requirement failed: cannot take half of an odd number
+)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In dependent type theory, we will have types that represent, for example, that a number is even. Specifically</p>
+<ul>
+<li>types will be first-class.</li>
+<li>types, including inductive types, can depend on terms (objects).</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[125]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="c1">// A bad definition</span>
+<span class="k">def</span> <span class="n">recHalf</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">recHalf</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[125]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>defined <span class="ansi-green-fg">function</span> <span class="ansi-cyan-fg">recHalf</span></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[126]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-scala"><pre><span></span><span class="n">recHalf</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[126]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><span class="ansi-cyan-fg">res125</span>: <span class="ansi-green-fg">Int</span> = <span class="ansi-green-fg">5</span></pre>
 </div>
 
 </div>

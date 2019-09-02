@@ -336,7 +336,40 @@ date: 31 July 2019
                     <li class="fragment"> Thus, if we have previously defined the natural numbers $\mathbb{N}$, then we can define the set
                             $$\{p \in\mathbb{N} : \text{$p$ is a prime number} \}.$$ 
                     </li>
-                    <li class="fragment"> All axioms of set theory except <em>extension</em> are statements giving us the existence of sets.</li>
+                    <li class="fragment"> Most axioms of set theory are statements giving us the existence of sets.</li>
+                </ul>
+            </section>
+            <section>
+                <h3>More axioms</h3>
+                <ul>
+                <li class="fragment">In our setup, we need an axiom for the empty set:
+                    $\forall x (\lnot(x\in \phi))$
+                </li>
+                <li class="fragment">
+                    We have axioms giving the unions of pairs and of arbitrary collections of sets.
+                </li>
+                <li class="fragment">The <em>axiom of infinity</em>, says that there exists a set $S$ such that
+                    <ul>
+                        <li>$\phi\in S$.</li>
+                        <li>$(x\in S) \implies ((x\cup \{x\}) \in S)$</li>
+                    </ul>                        
+                </li>
+                <li class="fragment">
+                    There are also two technical axioms: axioms of <em>regularity</em> and <em>replacement</em>, completing <strong>ZF</strong>.
+                </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Axiom of Choice and transfinite recursion</h3>
+                <ul>
+                        <li class="fragment">The <em>axiom of choice</em> is an axiom independent of <strong>ZF</strong> 
+                            - including this gives <strong>ZFC</strong>.</li>
+                        <li class="fragment">This says: let $(S_i)_{i\in I}$ be an indexed family of non-empty sets, where $I$ is the index set. 
+                            Then there is an indexed family of elements $(x_i)_{i\in I}$ such that $x_i\in S_i$ for all $i\in I$.</li>
+                        <li class="fragment"> In the presence of the axiom of choice, we can make constructions by <em>transfinite recursion</em></li>
+                        <li class="fragment">
+                        For instance we get the <em>trichotomy theorem:</em> for sets $A$ and $B$, at least one of $|A|\leq |B|$ and
+                        $|B|\leq |A|$ holds.</li>
                 </ul>
             </section>
 </section>

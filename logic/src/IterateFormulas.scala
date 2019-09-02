@@ -1,29 +1,29 @@
-package logic
+package logic 
 import Term._, Formula._
 
-object SetFormulas{
-    def terms(numVars: Int) : Set[Term] =
-        (0 until(numVars)).toSet.map{n : Int => Var(s"x$n") : Term} + Const("empty-set")
-
+object IterateFormulas{
+    def terms(numVars: Int) : Iterator[Term] =
+        ((0 until(numVars)).toSet.map{n : Int => Var(s"x$n") : Term} + Const("empty-set")).toIterator
+    
     val belongs = Relation("belongs", 2)
 
-    def formulaSet(depth: Int, numFreeVars: Int) : Set[Formula] = {
-        val termSet = terms(numFreeVars)
-        val baseFormulas : Set[Formula] =
+    def formulaIterator(depth: Int, numFreeVars: Int) : Iterator[Formula] = {
+        val termIterator = terms(numFreeVars)
+        val baseFormulas : Iterator[Formula] =
             for {
-                t1 <- termSet
-                t2 <- termSet
-                fmla <- Set(Equality(t1, t2), Atomic(belongs, Vector(t1, t2)))
+                t1 <- terms(numFreeVars)
+                t2 <- terms(numFreeVars)
+                fmla <- Iterator(Equality(t1, t2), Atomic(belongs, Vector(t1, t2)))
             } yield fmla
-        val recFormulas : Set[Formula] =
-            if (depth < 1) Set()
+        val recFormulas : Iterator[Formula] =
+            if (depth < 1) Iterator()
             else
             {
-                val lower = formulaSet(depth - 1, numFreeVars)
+                val lower = formulaIterator(depth - 1, numFreeVars)
             for {
-                fmla1 <- lower
-                fmla2 <- lower
-                rec <- Set(
+                fmla1 <- formulaIterator(depth - 1, numFreeVars)
+                fmla2 <- formulaIterator(depth - 1, numFreeVars)
+                rec <- Iterator(
                     Equivalent(fmla1, fmla2),
                     And(fmla1, fmla2),
                     Or(fmla1, fmla2),
@@ -32,30 +32,30 @@ object SetFormulas{
                     )
             } yield rec
         }
-        val quantifiedFormulas : Set[Formula] =
-            if (depth <1) Set()
+        val quantifiedFormulas : Iterator[Formula] = 
+            if (depth <1) Iterator() 
             else{
-                val lower = formulaSet(depth - 1, numFreeVars + 1)
+                val lower = formulaIterator(depth - 1, numFreeVars + 1)
                 val variable = Var(s"x${numFreeVars}")
                 for {
                     fmla <- lower
-                    quantified <- Set(ForAll(variable, fmla), Exists(variable, fmla))
+                    quantified <- Iterator(ForAll(variable, fmla), Exists(variable, fmla))
                 } yield quantified
-        }
+        }    
 
-        baseFormulas union recFormulas union quantifiedFormulas
+        baseFormulas ++ quantifiedFormulas  ++ recFormulas
     }
 
-    def closedFormulas(depth: Int) = formulaSet(depth, 0)
+    def closedFormulas(depth: Int) = formulaIterator(depth, 0)
 
     val stream : Stream[Formula] = Stream.from(0).flatMap(closedFormulas)
 
-    val iterator = stream.toIterator
+    val iterator = Stream.from(0).toIterator.flatMap(closedFormulas(_))
 
     def showTerm(t: Term) : String = t match {
         case Const(_) => s"\u2205"
         case Var(name) => name
-        case t => t.toString
+        case t => t.toString 
     }
 
     def pretty(formula: Formula): String = formula match {
