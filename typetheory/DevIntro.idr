@@ -12,6 +12,14 @@ fct: Nat -> Nat
 fct Z = 1
 fct (S k) = (S k) * (fct k)
 
+fibPair: Nat -> (Nat, Nat)
+fibPair Z = (1, 1)
+fibPair (S k) = case (fibPair k) of
+                     (a, b) => (b, a + b)
+
+fibo: Nat -> Nat
+fibo n = fst (fibPair n)
+
 -- Nat is itself a term with type `Type`
 naturals: Type
 naturals = Nat
