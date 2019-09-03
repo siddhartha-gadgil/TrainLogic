@@ -40,7 +40,12 @@ nOrSnEven (S k) = case nOrSnEven k of
 IsOdd: Nat -> Type
 IsOdd m = (IsEven m) -> Void
 
-succOdd: (n: Nat) -> IsEven n -> IsOdd (S n)
-succOdd Z ZeroEven = oneOdd
-succOdd (S (S k)) (SSEven k x) = \pf => (case pf of
-                                              (SSEven (S k) y) => succOdd k x y)
+notBothEven : (n: Nat) -> IsEven n -> IsEven (S n) -> Void
+notBothEven Z ZeroEven ZeroEven impossible
+notBothEven Z ZeroEven (SSEven _ _) impossible
+notBothEven (S (S k)) (SSEven k x) (SSEven (S k) y) = notBothEven k x y
+
+nOddThenSnEven : (n: Nat) -> (IsEven n -> Void) -> IsEven (S n)
+nOddThenSnEven n contra = case (nOrSnEven n) of
+                               (Left l) => void (contra l)
+                               (Right r) => r
