@@ -49,3 +49,12 @@ nOddThenSnEven : (n: Nat) -> (IsEven n -> Void) -> IsEven (S n)
 nOddThenSnEven n contra = case (nOrSnEven n) of
                                (Left l) => void (contra l)
                                (Right r) => r
+
+apNat : (f: Nat -> Nat) -> (n: Nat) -> (m: Nat) -> n = m -> f n = f m
+apNat f m m Refl = Refl
+
+
+byTwo : (n: Nat) -> IsEven n -> (k: Nat ** double k = n)
+byTwo Z ZeroEven = (0 ** Refl)
+byTwo (S (S k)) (SSEven k x) = case (byTwo k x) of
+          (m ** pf) => ((S m) ** apNat (\l => S (S l)) (double m) k pf)
