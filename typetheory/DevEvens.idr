@@ -37,9 +37,6 @@ nOrSnEven (S k) = case nOrSnEven k of
                        (Left l) => Right (SSEven k l)
                        (Right r) => Left r
 
-IsOdd: Nat -> Type
-IsOdd m = (IsEven m) -> Void
-
 notBothEven : (n: Nat) -> IsEven n -> IsEven (S n) -> Void
 notBothEven Z ZeroEven ZeroEven impossible
 notBothEven Z ZeroEven (SSEven _ _) impossible
