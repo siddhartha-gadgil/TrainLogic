@@ -77,7 +77,8 @@ zip : (n: Nat) -> (a: Type) -> (b: Type) -> Vect n a -> Vect n b -> Vect n (a, b
 zip Z a b [] [] = []
 zip (S len) a b (x :: xs) (y :: ys) = (x, y) :: (zip _ _ _ xs ys)
 
-filter : (n: Nat) -> (a: Type) -> (vec: Vect n a) -> (condition: a -> Bool) -> (m: Nat ** Vect m a) -- dependent pair
+filter : (n: Nat) -> (a: Type) -> (vec: Vect n a) -> (p: a -> Bool) -> (m: Nat ** Vect m a)
 filter Z a [] condition = (Z ** [])
-filter (S len) a (x :: xs) condition = case filter len a xs condition of
-                                            (m ** pf) => if (condition x) then (S m ** x :: pf) else (m ** pf)
+filter (S len) a (x :: xs) p =
+  case filter len a xs p of
+        (m ** pf) => if (p x) then (S m ** x :: pf) else (m ** pf)
