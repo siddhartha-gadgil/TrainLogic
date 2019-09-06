@@ -85,6 +85,26 @@ zipNat : (n: Nat) -> Vect n Nat -> Vect n Nat -> Vect n (Nat, Nat)
 zipNat Z [] [] = []
 zipNat (S len) (x :: xs) (y :: ys) = (x , y) :: (zipNat len xs ys)
 
+zip : (n: Nat) -> (a: Type) -> (b: Type) -> Vect n a -> Vect n b -> Vect n (a, b)
+zip Z a b [] [] = []
+zip (S len) a b (x :: xs) (y :: ys) =
+  (x, y) :: (zip len a b xs ys)
+
+append: (n: Nat) -> (a: Type) -> (x: a) -> Vect n a -> Vect (S n) a
+append Z a x [] = [x]
+append (S len) a x (y :: xs) =
+  y :: (append len a x xs)
+
+filter: (n: Nat) -> (a: Type) -> (p: a -> Bool) -> Vect n a -> (m: Nat ** Vect m a)
+filter Z a p [] = (Z ** [])
+filter (S len) a p (x :: xs) =
+  (case p x of
+        False => filter len a p xs
+        True => (case filter len a p xs of
+                      (m ** pf) =>
+                        (S m ** x :: pf) ))
+
+
 
 
 -- some space

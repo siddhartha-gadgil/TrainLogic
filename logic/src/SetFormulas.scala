@@ -1,10 +1,10 @@
-package logic 
+package logic
 import Term._, Formula._
 
 object SetFormulas{
     def terms(numVars: Int) : Set[Term] =
         (0 until(numVars)).toSet.map{n : Int => Var(s"x$n") : Term} + Const("empty-set")
-    
+
     val belongs = Relation("belongs", 2)
 
     def formulaSet(depth: Int, numFreeVars: Int) : Set[Formula] = {
@@ -32,8 +32,8 @@ object SetFormulas{
                     )
             } yield rec
         }
-        val quantifiedFormulas : Set[Formula] = 
-            if (depth <1) Set() 
+        val quantifiedFormulas : Set[Formula] =
+            if (depth <1) Set()
             else{
                 val lower = formulaSet(depth - 1, numFreeVars + 1)
                 val variable = Var(s"x${numFreeVars}")
@@ -41,7 +41,7 @@ object SetFormulas{
                     fmla <- lower
                     quantified <- Set(ForAll(variable, fmla), Exists(variable, fmla))
                 } yield quantified
-        }    
+        }
 
         baseFormulas union recFormulas union quantifiedFormulas
     }
