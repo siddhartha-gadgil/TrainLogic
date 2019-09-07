@@ -55,3 +55,22 @@ byTwo : (n: Nat) -> IsEven n -> (k: Nat ** double k = n)
 byTwo Z ZeroEven = (0 ** Refl)
 byTwo (S (S k)) (SSEven k x) = case (byTwo k x) of
           (m ** pf) => ((S m) ** apNat (\l => S (S l)) (double m) k pf)
+
+isDouble: Nat -> Type
+isDouble n = (m : Nat ** (double m) = n)
+
+evenIsDouble: (n: Nat) -> IsEven n -> (isDouble n)
+evenIsDouble Z ZeroEven = (Z ** Refl)
+evenIsDouble (S (S k)) (SSEven k x) =
+  (case evenIsDouble k x of
+        (m ** pf) => (S m ** apNat (\l => S (S l)) (double m) k pf)
+        )
+
+transport : (a : Type) -> (P : a -> Type) ->  (x : a) -> (y : a) -> (x = y) -> P(x) -> P(y)
+transport a P y y Refl z = z
+
+doubleIsEven: (n: Nat) -> isDouble n -> IsEven n
+doubleIsEven n pair =
+  case pair of
+        (k ** pf) =>
+          transport Nat IsEven (double k) n pf (doubleEven k)
