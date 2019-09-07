@@ -257,7 +257,7 @@ the type of the values depend on the arguments.
 
 Such functions are called _dependent functions_. The type of such a functions is called a _dependent function type_ or a `$\Pi-type` (
 the latter term is because they are in some sense products). For instance in more mathematical type theory notation,
-`$$countdown : \Pi_{n\in \mathbb{N}} Tuple(n)$$`
+`$$countdown : \prod_{n\in \mathbb{N}} Tuple(n)$$`
 
 #### Vectors : an (indexed) inductive type family
 
@@ -309,6 +309,52 @@ We see:
 *Intro> zipNat _ [1, 3, 5] [10, 20, 30]
 [(1, 10), (3, 20), (5, 30)] : Vect 3 (Nat, Nat)
 ```
+
+A couple of more examples: zipping vectors of arbitrary types and appending to a vector. Note the signatures.
+```
+zip : (n: Nat) -> (a: Type) -> (b: Type) -> Vect n a -> Vect n b -> Vect n (a, b)
+zip Z a b [] [] = []
+zip (S len) a b (x :: xs) (y :: ys) =
+  (x, y) :: (zip len a b xs ys)
+
+append: (n: Nat) -> (a: Type) -> (x: a) -> Vect n a -> Vect (S n) a
+append Z a x [] = [x]
+append (S len) a x (y :: xs) =
+  y :: (append len a x xs)
+```
+
+### Dependent pairs and `$\Sigma$`-types
+
+For the final concept of this post, we consider how we could define a _filter_ function on vectors, which, for example, returns
+all the prime numbers in the vector. The subtlety is that the length of the vector, and hence the return type, is __not__ determined
+by the argument type.
+
+What we do is return a pair `$(m, v)$` where `$m$` is a natural number and `$v$` is a vector of length `$m$`. Note that this is not
+an ordinary pair, i.e. of the form `$(a, b) : A \times B$` with `$a: A$` and `$b: B$`, since the __type__ of the second component `$v$`
+__depends__ on the first component `$m$`. Such a pair is called a _dependent pair_ and its type a _dependent pair type_ or a `$\Sigma$`-type.
+
+More generally, let $A$ be a type and `$B: A\to Type$` be a type family. We then can form the `$\Sigma$`-type
+`$$\sum_{a\in A} B(a)$$`
+with terms of this type pairs `$(a, b)$` with `$a : A$` and `$b: B(a)$`. In idris the notation `**` is used to denote dependent pair types
+as well as dependent types.
+```
+filter: (n: Nat) -> (a: Type) -> (p: a -> Bool) -> Vect n a -> (m: Nat ** Vect m a)
+filter Z a p [] = (Z ** [])
+filter (S len) a p (x :: xs) =
+  (case p x of
+        False => filter len a p xs
+        True => (case filter len a p xs of
+                      (m ** pf) =>
+                        (S m ** x :: pf) ))
+```
+
+An example is as follows. In idris `$\lambda$` is denoted by backslash, so `\n => n > 2` is the function `$n\mapsto n > 2$`.
+```
+*Intro> filter _ Nat (\n => n > 2) [1, 3, 4, 2, 5]
+(3 ** [3, 4, 5]) : (m : Nat ** Vect m Nat)
+```
+The first component `3` above is the length of the result and the second component the vector of this length obtained by filtering.
+
 
 ### Rules for forming terms and types
 
