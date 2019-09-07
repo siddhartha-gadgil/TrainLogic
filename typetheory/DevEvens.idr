@@ -74,3 +74,18 @@ doubleIsEven n pair =
   case pair of
         (k ** pf) =>
           transport Nat IsEven (double k) n pf (doubleEven k)
+
+-- The Peano axioms
+
+sInj : (x: Nat) -> (y: Nat) -> (S x = S y) -> (x = y)
+sInj Z Z Refl = Refl
+sInj (S k) (S k) Refl = Refl
+
+sNotZ : (x: Nat) -> (S x = Z) -> Void
+sNotZ _ Refl impossible
+
+symmEq : (x: Nat) -> (y: Nat) -> (x = y) -> (y = x)
+symmEq y y Refl = Refl
+
+transEq: (x: Nat) -> (y: Nat) -> (z: Nat) -> (x = y) -> (y = z) -> (x = z)
+transEq y y y Refl Refl = Refl
