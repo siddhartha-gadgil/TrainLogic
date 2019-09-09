@@ -138,7 +138,7 @@ egTree = Node (Node Leaf (Node Leaf Leaf)) Leaf
 
 As we have mentioned before, we can define functions recursively on inductive types. The following counts the number of vertices.
 
-```
+```haskell
 numberVertices : BinTree -> Nat
 numberVertices Leaf = 1
 numberVertices (Node left right) =
