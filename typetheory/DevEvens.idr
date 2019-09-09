@@ -60,11 +60,7 @@ isDouble: Nat -> Type
 isDouble n = (m : Nat ** (double m) = n)
 
 evenIsDouble: (n: Nat) -> IsEven n -> (isDouble n)
-evenIsDouble Z ZeroEven = (Z ** Refl)
-evenIsDouble (S (S k)) (SSEven k x) =
-  (case evenIsDouble k x of
-        (m ** pf) => (S m ** apNat (\l => S (S l)) (double m) k pf)
-        )
+evenIsDouble = byTwo
 
 transport : (a : Type) -> (P : a -> Type) ->  (x : a) -> (y : a) -> (x = y) -> P(x) -> P(y)
 transport a P y y Refl z = z
@@ -90,5 +86,7 @@ symmEq y y Refl = Refl
 transEq: (x: Nat) -> (y: Nat) -> (z: Nat) -> (x = y) -> (y = z) -> (x = z)
 transEq y y y Refl Refl = Refl
 
+-- Range type
+
 data InRange : Nat -> Nat -> Type where
-  MkInRange : (x : Nat) -> (y : Nat) -> (n : Nat) -> LTE x n -> LTE n y -> InRange x y 
+  MkInRange : (x : Nat) -> (y : Nat) -> (n : Nat) -> LTE x n -> LTE n y -> InRange x y
