@@ -89,3 +89,6 @@ symmEq y y Refl = Refl
 
 transEq: (x: Nat) -> (y: Nat) -> (z: Nat) -> (x = y) -> (y = z) -> (x = z)
 transEq y y y Refl Refl = Refl
+
+data InRange : Nat -> Nat -> Type where
+  MkInRange : (x : Nat) -> (y : Nat) -> (n : Nat) -> LTE x n -> LTE n y -> InRange x y 
