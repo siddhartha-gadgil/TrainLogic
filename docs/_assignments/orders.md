@@ -9,7 +9,7 @@ Recall that a _relation_ $R$ on a set $S$ is a subset of `$S\times S$`. We have 
 * We say that a reflexive relation $R$ is _anti-symmetric_ if `$\forall x,y\in S\ ((x, y)\in R)\land((y, x)\in R)\implies x = y$`.
 * We say that $R$ is a _partial-order_ if $R$ is reflexive, anti-symmetric and transitive.
 * A partial-order $R$ is said to be a [_total order_](https://en.wikipedia.org/wiki/Total_order) if, in addition, `$\forall x,y\in S\ (x, y)\in R\lor (y, x)\in R$` (this means that every pair of elements is comparable).
-* An element $a\in S$ is said to be a _minimum_ with respect to the partial order $R$ if `$\forall x\in S\ (a, x)\in R$`.
+* An element $a\in S$ is said to be a _minimum_ with respect to the partial order $R$ if `$\forall x\in S\ (x, a)\in R \implies x = a$`.
 * __Fact:__ If $R$ is a total order on a finite set $S$, there is a _unique_ minimum.
 
 
