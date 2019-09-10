@@ -86,7 +86,34 @@ symmEq y y Refl = Refl
 transEq: (x: Nat) -> (y: Nat) -> (z: Nat) -> (x = y) -> (y = z) -> (x = z)
 transEq y y y Refl Refl = Refl
 
+--- Less than or equal and subtraction
+
+sub : (n: Nat) -> (m : Nat) -> (LTE m n) -> Nat
+sub n Z LTEZero = n
+sub (S right) (S left) (LTESucc x) = sub right left x
+
+superSub : (n: Nat) -> (m : Nat) -> (LTE m n) -> (diff: Nat ** LTE diff n)
+superSub n Z LTEZero = (n ** lteRefl)
+superSub (S n) (S m) (LTESucc x) = case (superSub n m x) of
+                                               (diff ** pf) => (diff ** lteSuccRight pf)
+
+oneLTEFour : LTE 1 4
+oneLTEFour = LTESucc LTEZero
+
+fourMinusOne : Nat
+fourMinusOne = sub 4 1 oneLTEFour
+
+
 -- Range type
 
 data InRange : Nat -> Nat -> Type where
   MkInRange : (x : Nat) -> (y : Nat) -> (n : Nat) -> LTE x n -> LTE n y -> InRange x y
+
+oneBetween0And4 : InRange 0 4
+oneBetween0And4 = MkInRange 0 4 1 LTEZero oneLTEFour
+
+Cast (InRange n m) Nat where -- cast is an interface (typeclass in scala)
+  cast (MkInRange n m k x y) = k
+
+one: Nat
+one = cast oneBetween0And4
