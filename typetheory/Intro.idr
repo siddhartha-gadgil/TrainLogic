@@ -105,6 +105,10 @@ filter (S len) a p (x :: xs) =
                         (S m ** x :: pf) ))
 
 
+data Nothing : Type where
+
+vacuous : (a: Type) -> Nothing -> a
+
 
 
 -- some space
