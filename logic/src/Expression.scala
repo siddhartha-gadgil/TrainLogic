@@ -115,38 +115,85 @@ case class Structure[A](
     relations: Map[Relation, Vector[A] => Boolean],
     constants: Map[Const, A]
 ) {
-  def element(t: Term, assignments: Map[Var, A]): A =
+  def element(t: Term, assignments: Map[Var, A]): A = {
     t match {
       case c @ Const(name) => constants(c)
       case Recursive(function, arguments) =>
         functions(function)(arguments.map(x => element(x, assignments)))
       case v @ Var(name) => assignments(v)
     }
-  def isTrue(f: Formula, assignments: Map[Var, A]) : Boolean =
+  }.ensuring { a =>
+    domain.contains(a)
+  }
+
+  def isTrue(f: Formula, assignments: Map[Var, A]): Boolean =
     f match {
-      case And(p, q)                   => isTrue(p, assignments) && isTrue(q, assignments)
-      case Implies(p, q)               => !isTrue(p, assignments) || isTrue(q, assignments)
-      case Not(p)                      => !isTrue(p, assignments)
-      case Equivalent(p, q)            => isTrue(p, assignments) == isTrue(q, assignments)
-      case Equality(lhs, rhs)          => element(lhs, assignments) == element(rhs, assignments)
-      case ForAll(x, p)                => 
-        domain.forall(y =>
-            isTrue(f, assignments + (x -> y)))
-      case Exists(x, p)                => 
-        domain.exists(y =>
-            isTrue(f, assignments + (x -> y)))
-      case Atomic(relation, arguments) => 
+      case And(p, q)        => isTrue(p, assignments) && isTrue(q, assignments)
+      case Implies(p, q)    => !isTrue(p, assignments) || isTrue(q, assignments)
+      case Not(p)           => !isTrue(p, assignments)
+      case Equivalent(p, q) => isTrue(p, assignments) == isTrue(q, assignments)
+      case Equality(lhs, rhs) =>
+        element(lhs, assignments) == element(rhs, assignments)
+      case ForAll(x, p) =>
+        domain.forall(y => isTrue(p, assignments + (x -> y)))
+      case Exists(x, p) =>
+        domain.exists(y => isTrue(p, assignments + (x -> y)))
+      case Atomic(relation, arguments) =>
         relations(relation)(arguments.map(x => element(x, assignments)))
-      case Or(p, q)                    => isTrue(p, assignments) || isTrue(q, assignments)
+      case Or(p, q) => isTrue(p, assignments) || isTrue(q, assignments)
     }
 
-    def isModel(axioms: Set[Formula]) = {
-        axioms.foreach(f => require(freeVariables(f).isEmpty, s"$f has free variables ${freeVariables(f)}"))
-        axioms.forall(f => isTrue(f, Map()))
-    }
+  def isModel(axioms: Set[Formula]) = {
+    axioms.foreach(
+      f =>
+        require(
+          freeVariables(f).isEmpty,
+          s"$f has free variables ${freeVariables(f)}"
+        )
+    )
+    axioms.forall(f => isTrue(f, Map()))
+  }
 }
 
-case class Model[A](axioms: Set[Formula], struct: Structure[A]){
-    axioms.foreach(f => require(freeVariables(f).isEmpty, s"$f has free variables ${freeVariables(f)}"))
-    axioms.foreach(f => require(struct.isTrue(f, Map()), s"formula $f does not hold for the interpretation"))
+case class Model[A](axioms: Set[Formula], struct: Structure[A]) {
+  axioms.foreach(
+    f =>
+      require(
+        freeVariables(f).isEmpty,
+        s"$f has free variables ${freeVariables(f)}"
+      )
+  )
+  axioms.foreach(
+    f =>
+      require(
+        struct.isTrue(f, Map()),
+        s"formula $f does not hold for the interpretation"
+      )
+  )
+}
+
+object Z3Model {
+  val plus = Function("+", 2)
+  val S = Function("S", 1)
+  val Z = Const("0")
+  def add(v: Vector[Int]) = (v(0) + v(1)) % 3
+  def succ(n: Vector[Int]) = (n.head + 1) % 3
+  val domain = (0 to 2).toSet
+  val struct =
+    Structure(domain, Map(plus -> add _, S -> succ _), Map(), Map(Z -> 0))
+  val n = Var("n")
+  val m = Var("m")
+  val commute = ForAll(
+    m,
+    ForAll(
+      n,
+      Equality(Recursive(plus, Vector(n, m)), Recursive(plus, Vector(m, n)))
+    )
+  )
+  val checkComm =  struct.isTrue(commute, Map())
+
+  val SnotZ = ForAll(n, Not(Equality(n, Z)))
+  
+  val checkSucc = struct.isTrue(SnotZ, Map())
+
 }
