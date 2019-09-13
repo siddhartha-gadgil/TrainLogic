@@ -1,6 +1,6 @@
 import mill._, scalalib._
 
-object logic extends ScalaModule {
+object logic extends SbtModule {
   def scalaVersion = "2.12.8"
 
   def bin() : define.Command[PathRef] = T.command {
