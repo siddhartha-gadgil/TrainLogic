@@ -192,7 +192,7 @@ object Z3Model {
   )
   val checkComm =  struct.isTrue(commute, Map())
 
-  val SnotZ = ForAll(n, Not(Equality(n, Z)))
+  val SnotZ = ForAll(n, Not(Equality(Recursive(S, Vector(n)), Z)))
   
   val checkSucc = struct.isTrue(SnotZ, Map())
 
